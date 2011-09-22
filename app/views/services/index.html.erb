@@ -1,0 +1,11 @@
+<% if @services.any? %>
+  <% @services.each do |service| %>
+    <div><%= service.name %></div>
+  <% end %>
+<% else %>
+  <h1>No services in database</h1>
+<% end %>
+
+<% content_for :header do%>
+	<h1><%= @category.nil? ? 'All Srvices' : @category.name %></h1>
+<% end %>

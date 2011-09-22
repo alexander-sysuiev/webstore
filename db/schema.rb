@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(:version => 20110921180651) do
 
   create_table "services", :force => true do |t|
     t.string  "name"
-    t.integer "categoty_id"
+    t.integer "category_id"
     t.integer "boiler_id"
     t.decimal "price",       :precision => 10, :scale => 0
   end

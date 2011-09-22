@@ -15,3 +15,18 @@
   background-color: #44DDDD;
   padding: 15px 10px;
 }
+
+#header h1{
+	text-align: center;
+	margin: 0;
+}
+
+#header {
+	background-color: #CCCCCC;
+	margin-bottom: -16px;
+}
+
+body {
+	margin: 0;
+	background-color: #CCCCCC;
+}

@@ -1,3 +1,3 @@
-class Service
-  belong_to :boiler
+class Service < ActiveRecord::Base
+  belongs_to :category
 end

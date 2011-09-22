@@ -1,22 +1,13 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
-#   Mayor.create(:name => 'Daley', :city => cities.first)
-
-
-[:category, :boiler].each do |table|
+[:category, :boiler, :service].each do |table|
 	table.to_s.camelize.constantize.send(:delete_all)
 end
 
 coal_boilers = Category.create(:name => 'Coal Boilers')
 gas_boilers = Category.create(:name => 'Gas Boilers')
-
-[:category, :boiler]
-
 wood_boilers = Category.create(:name => 'Wood Boilers')
+
+mounting = Category.create(:name => 'Mounting')
+repair = Category.create(:name => 'Repair')
 
 boilers = Boiler.create(
 	[
@@ -26,5 +17,16 @@ boilers = Boiler.create(
 		{ :name => 'Shit Happens', :price => 64.70, :category_id => gas_boilers.id },
 		{ :name => 'BoilMe', :price => 200, :category_id => gas_boilers.id },
 		{ :name => 'Gaser', :price => 50, :category_id => wood_boilers.id }
+	]
+)
+
+services = Service.create(
+	[
+		{ :name => 'Wall Mounting', :category_id => mounting.id},
+		{ :name => 'Floar Mounting', :category_id => mounting.id},
+		{ :name => 'Celling Mounting', :category_id => mounting.id},
+		{ :name => 'Cooler Rapair', :category_id => repair.id},
+		{ :name => 'Block Repair', :category_id => repair.id},
+		{ :name => 'Brain Repairment', :category_id => repair.id},
 	]
 )

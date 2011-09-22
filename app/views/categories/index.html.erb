@@ -1,6 +1,9 @@
 <% if @categories.any? %>
   <% @categories.each do |category| %>
-    <div><%= link_to category.name, category_boilers_path(category) %></div>
+    <div>
+    	<%= link_to category.name, category.boilers.any? ? category_boilers_path(category) :
+    																										 category_services_path(category) %>
+    </div>
   <% end %>
 <% else %>
   <h1>No categories in database</h1>
