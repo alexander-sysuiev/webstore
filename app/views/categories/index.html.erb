@@ -1,0 +1,11 @@
+<% if @categories.any? %>
+  <% @categories.each do |category| %>
+    <div><%= link_to category.name, category_boilers_path(category) %></div>
+  <% end %>
+<% else %>
+  <h1>No categories in database</h1>
+<% end %>
+
+<% content_for :header do%>
+	<h1>Categories</h1>
+<% end %>

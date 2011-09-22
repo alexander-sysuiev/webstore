@@ -1,8 +1,8 @@
-class CreateGoods < ActiveRecord::Migration
+class CreateBoilers < ActiveRecord::Migration
   def self.up
-    create_table :goods do |t|
+    create_table :boilers do |t|
       t.string :name
-      t.string :price
+      t.decimal :price, :precision => 10, :scale => 2
       t.integer :category_id
       t.timestamp :created_at
       t.timestamp :updated_at
@@ -10,6 +10,6 @@ class CreateGoods < ActiveRecord::Migration
   end
 
   def self.down
-    drop_table :goods
+    drop_table :boilers
   end
 end

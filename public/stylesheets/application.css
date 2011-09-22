@@ -1,0 +1,17 @@
+#main-menu li{
+  display: inline;
+}
+
+#main-menu li a{
+  border: 1px #444488;
+  background-color: #444488;
+  color: #CC4444;
+  padding: 5px 10px;
+  text-decoration: none;
+  border-radius: 15px;
+}
+
+#main-menu {
+  background-color: #44DDDD;
+  padding: 15px 10px;
+}
