@@ -1,10 +1,11 @@
 <% if @categories.any? %>
-  <% @categories.each do |category| %>
-    <div>
-    	<%= link_to category.name, category.boilers.any? ? category_boilers_path(category) :
-    																										 category_services_path(category) %>
-    </div>
-  <% end %>
+	<ul id="category-list">
+	  <% @categories.each do |category| %>
+	    <li class="category">
+	    	<%= category_link(category) %>
+	    </li>
+	  <% end %>
+  </ul>
 <% else %>
   <h1>No categories in database</h1>
 <% end %>

@@ -1,2 +1,13 @@
 Startup webstore projects.
 Insufficient of ideas are blocking current work.
+Plans:
+ 0. Add orders
+ 1. Add devise
+ 2. Add pictures to models
+ 3. Add show pages
+ 4. Add orders form
+ 5. Do some model refactoring
+ 6. Investigate designs
+ 7. Add addresses
+ 8. Add Rspecs
+ 

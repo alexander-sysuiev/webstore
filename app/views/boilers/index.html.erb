@@ -1,6 +1,6 @@
 <% if @boilers.any? %>
   <% @boilers.each do |boiler| %>
-    <div><%= boiler.name %></div>
+    <div><%= link_to boiler.name, category_boiler_path(boiler.category_id, boiler.id) %></div>
   <% end %>
 <% else %>
   <h1>No boilers in database</h1>
