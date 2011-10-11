@@ -1,0 +1,23 @@
+.category-link {
+	padding: 5px;
+}
+
+.category {
+	border-bottom: 1px solid #808080;
+  padding: 10px 0 10px 10px;
+  text-decoration: none;
+  color: #BBBBDD;
+  font-weight: bold;
+}
+
+.category:hover {
+	color: #8888DD;
+}
+
+#category-list {
+	list-style: none inside none;
+  max-width: 20%;
+  padding: 0;
+  margin-top: -15px;
+  background: url("/images/back_green.gif") repeat scroll left top transparent;
+}

@@ -1,0 +1,13 @@
+<div class="boiler-header"><%= @boiler.name %></div>
+<div class="boiler-picture">
+	<%= image_tag @boiler.picture.present? ? @boiler.picture.photo.url(:preview) : '/images/tab.gif' %>
+</div>
+<div>Settings</div>
+<% if @settings.any? %>
+	<dl>
+		<% @settings.each do |setting| %>
+			<dt><%= setting.name %></dt>
+			<dd><%= setting.value %></dd>
+		<% end %>
+	</dl>
+<% end %>
