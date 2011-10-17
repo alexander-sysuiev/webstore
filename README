@@ -3,11 +3,13 @@ Insufficient of ideas are blocking current work.
 Plans:
  0. Add orders
  1. Add devise
- 3. Add show pages
  4. Add orders form
  5. Do some model refactoring
  6. Investigate designs
  7. Add addresses
  8. Add Rspecs
  9. Remove asset files on seeding
+ 10. Add Gitignore
+ 11. Add admin cabinet
+ 12. Add vendor
  

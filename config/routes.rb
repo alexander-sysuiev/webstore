@@ -1,5 +1,6 @@
 Webstore::Application.routes.draw do |map|
   map.root :controller => :categories, :action => :index
+  devise_for :users
   map.resources :boilers, :only => [:index]
   map.resources :services, :only => [:index]
   map.resources :categories, :only => [] do |categories|
