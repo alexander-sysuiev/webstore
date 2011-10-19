@@ -1,20 +1,19 @@
-admin = Admin.new(:first_name => 'Store',
-								  :last_name => 'Admin',
-								  :email => 'admin@webstore.com',
-								  :password => 'admin',
-								  :password_confirmation => 'admin')
-admin.save!
-
-[:category, :boiler, :service, :picture].each do |table|
+[:category, :boiler, :service, :picture, :admin].each do |table|
 	table.to_s.camelize.constantize.send(:delete_all)
 end
 
-coal_boilers = Category.create(:name => 'Coal Boilers')
-gas_boilers = Category.create(:name => 'Gas Boilers')
-wood_boilers = Category.create(:name => 'Wood Boilers')
+admin = Admin.create(:first_name => 'Store',
+  				     :last_name => 'Admin',
+					 :email => 'admin@webstore.com',
+					 :password => 'admin',
+					 :password_confirmation => 'admin')
 
-mounting = Category.create(:name => 'Mounting')
-repair = Category.create(:name => 'Repair')
+coal_boilers = Category.create(:name => 'Coal Boilers', :kind => 'boiler')
+gas_boilers = Category.create(:name => 'Gas Boilers', :kind => 'boiler')
+wood_boilers = Category.create(:name => 'Wood Boilers', :kind => 'boiler')
+
+mounting = Category.create(:name => 'Mounting', :kind => 'service')
+repair = Category.create(:name => 'Repair', :kind => 'service')
 
 ['boiler1', 'boiler2', 'boiler3', 'boiler4', 'boiler5', 'boiler6'].each do |name|
 	f = File.open "uploads/boiler_pictures/#{name}.gif"

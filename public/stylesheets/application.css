@@ -59,6 +59,37 @@
 	margin-bottom: -16px;
 }
 
+#content-wrapper {
+	display: inline-block;
+}
+
+#side-menu {
+	background-color: #507090;
+    display: inline-block;
+    margin-top: -16px;
+    vertical-align: top;
+}
+
+#side-menu ul{
+	list-style: none outside none;
+    margin-right: 5px;
+    margin-top: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#side-menu li{
+	margin-bottom: 10px;
+}
+
+#side-menu li a{
+	color: #222222;
+}
+
+#side-menu li a:hover {
+	color: #BBBBBB;
+}
+
 body {
 	margin: 0;
 	background-color: #D0D0EE;
