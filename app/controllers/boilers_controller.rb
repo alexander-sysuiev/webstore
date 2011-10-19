@@ -1,4 +1,4 @@
-class BoilersController < ApplicationController
+class BoilersController < WorkflowController
   def index
   	@category = Category.find_by_id(params[:category_id])
     @boilers = @category.nil? ? Boiler.all : @category.boilers

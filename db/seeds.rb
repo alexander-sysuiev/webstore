@@ -1,3 +1,10 @@
+admin = Admin.new(:first_name => 'Store',
+								  :last_name => 'Admin',
+								  :email => 'admin@webstore.com',
+								  :password => 'admin',
+								  :password_confirmation => 'admin')
+admin.save!
+
 [:category, :boiler, :service, :picture].each do |table|
 	table.to_s.camelize.constantize.send(:delete_all)
 end

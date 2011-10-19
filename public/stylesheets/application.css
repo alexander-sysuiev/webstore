@@ -9,6 +9,14 @@
   padding-bottom: 20px;
 }
 
+#about-wrapper {
+	padding: 0 20px;
+}
+
+#about-wrapper h3 {
+	text-align: center;
+}
+
 #main-menu li a{
   border: 1px #444488;
   background-color: #99AABD;
@@ -18,9 +26,27 @@
   border-radius: 10px;
 }
 
+#main-menu-items {
+	padding: 15px 10px;
+	display: inline-block;
+	margin: 0;
+}
+
+.session-links {
+	display: inline-block;
+	margin-right: 20px;
+  margin-top: 1.7%;
+  float:right;
+}
+
+.session-links a {
+	color: #000000;
+}
+
 #main-menu {
 	background-color: #507090;
-  padding: 15px 10px;
+  margin-bottom: 16px;
+  margin-top: 18px;
 }
 
 #header h1{

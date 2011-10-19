@@ -1,4 +1,4 @@
-class CategoriesController < ApplicationController
+class CategoriesController < WorkflowController
 	def index
 		@categories = Category.all
 	end

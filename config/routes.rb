@@ -1,6 +1,6 @@
 Webstore::Application.routes.draw do |map|
   map.root :controller => :categories, :action => :index
-  devise_for :users
+  devise_for :admins
   map.resources :boilers, :only => [:index]
   map.resources :services, :only => [:index]
   map.resources :categories, :only => [] do |categories|
@@ -8,4 +8,5 @@ Webstore::Application.routes.draw do |map|
   	categories.resources :services, :only => [:index, :show]
   end
   map.resource :about, :only => [:show]
+  map.resource :admin, :only => [:show]
 end

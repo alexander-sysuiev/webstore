@@ -1,4 +1,4 @@
-class AboutsController < ApplicationController
+class AboutsController < WorkflowController
 	def show
 	end
 end

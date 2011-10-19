@@ -1,0 +1,23 @@
+		<% content_for :content do%>
+			  <div id="header">
+	  			<%= content_for :header %>
+			  </div>
+			  <div id="main-menu">
+					<ul id="main-menu-items">
+						<li><%= link_to 'Categories', root_path %></li>
+					  <li><%= link_to 'Boilers', boilers_path %></li>
+					  <li><%= link_to 'Services', services_path %></li>
+					  <li><%= link_to 'About', about_path %></li>
+					  <% if admin_signed_in? %>
+					  	<li><%= link_to 'Cabinet', admin_path %></li>
+					  <% end %>
+					</ul>
+					<% if admin_signed_in? %>
+						<div class='session-links'>
+							<%= link_to 'Logout', destroy_admin_session_path, :method => :delete %>
+						</div>
+					<% end %>
+				</div>
+				<%= yield %>
+		<% end %>
+		<%= render :template => 'layouts/application' %>

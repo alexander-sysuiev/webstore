@@ -1,0 +1,30 @@
+<% form_for current_admin, admin_path do |f|%>
+	<dl>
+		<dt>
+			<%= f.label :first_name, 'First Name' %>
+		</dt>
+		<dd>
+			<%= f.text_field :first_name %>
+		</dd>
+		<dt>
+			<%= f.label :last_name, 'Last Name' %>
+		</dt>
+		<dd>
+			<%= f.text_field :last_name %>
+		</dd>
+		<dt>
+			<%= f.label :email, 'Email' %>
+		</dt>
+		<dd>
+			<%= f.text_field :email %>
+		</dd>
+	</dl>
+	<%= f.submit 'Save' %>
+<% end %>
+<%= link_to 'Add category', '#' %>
+<%= link_to 'Add setting', '#' %>
+<%= link_to 'Add boiler', '#' %>
+<%= link_to 'Add service', '#' %>
+<% content_for :header do%>
+	<h1>Admins Cabinet</h1>
+<% end %>
