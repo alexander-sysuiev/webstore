@@ -3,10 +3,10 @@
 }
 
 #body-wrapper {
-	width: 70%;
+  width: 70%;
   margin: 40px auto;
   background-color: #B0B0D0;
-  padding-bottom: 20px;
+  padding-bottom: 0;
 }
 
 #about-wrapper {
@@ -68,12 +68,14 @@
     display: inline-block;
     margin-top: -16px;
     vertical-align: top;
+    margin-right: 20px;
+    min-height: 400px;
 }
 
 #side-menu ul{
 	list-style: none outside none;
     margin-right: 5px;
-    margin-top: 5px;
+    margin-top: 15px;
     padding-left: 10px;
     padding-right: 10px;
 }

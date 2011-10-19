@@ -8,5 +8,9 @@ Webstore::Application.routes.draw do |map|
   	categories.resources :services, :only => [:index, :show]
   end
   map.resource :about, :only => [:show]
-  map.resource :admin, :only => [:show]
+  map.namespace :admin do |admin|
+    admin.root :controller => :base, :action => :show
+    admin.resource :base, :only => [:create]
+    admin.resources :boilers, :only => [:new]
+  end
 end
