@@ -1,1 +1,25 @@
 <h1>Add Boiler</h1>
+<% form_for @boiler do |f| %>
+	<dl>
+		<dt>
+			<%= f.label :name, 'Name' %>
+		</dt>
+		<dd>
+			<%= f.text_field :name %>
+		</dd>
+		<dt>
+			<%= f.label :price, 'Price' %>
+		</dt>
+		<dd>
+			<%= f.text_field :price %>
+		</dd>
+		<dt>
+			<%= f.label :category_id, 'Category' %>
+		</dt>
+		<dd>
+			<%= f.select :category_id, Category.boilers.map{|category| [category.name, category.id]} %>
+		</dd>
+	</dl>
+
+	<%= f.submit 'Create' %>
+<% end %>

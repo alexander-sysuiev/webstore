@@ -1,4 +1,5 @@
 class Admin::BoilersController < Admin::BaseController
-	def edit
+	def new
+		@boiler = Boiler.new
 	end
 end

@@ -16,7 +16,7 @@ mounting = Category.create(:name => 'Mounting', :kind => 'service')
 repair = Category.create(:name => 'Repair', :kind => 'service')
 
 ['boiler1', 'boiler2', 'boiler3', 'boiler4', 'boiler5', 'boiler6'].each do |name|
-	f = File.open "uploads/boiler_pictures/#{name}.gif"
+	f = File.open "uploads/boiler_pictures/#{name}.png"
 	p = Picture.new
 	p.photo = f
 	p.save	
