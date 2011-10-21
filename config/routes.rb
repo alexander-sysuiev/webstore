@@ -11,6 +11,6 @@ Webstore::Application.routes.draw do |map|
   map.namespace :admin do |admin|
     admin.root :controller => :base, :action => :show
     admin.resource :base, :only => [:create]
-    admin.resources :boilers, :only => [:new]
+    admin.resources :boilers, :only => [:new, :create]
   end
 end
