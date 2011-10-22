@@ -6,6 +6,8 @@ class Category < ActiveRecord::Base
 	named_scope :boilers, :conditions => { :kind => :boiler }
 	named_scope :services, :conditions => { :kind => :service }
 
+	KINDS = [:service, :boiler]	
+
 	def service?
 		kind == 'service'
 	end

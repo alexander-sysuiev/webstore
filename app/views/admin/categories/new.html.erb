@@ -1,0 +1,18 @@
+<h1>Create Category</h1>
+<% form_for :category, :url => admin_categories_path do |f| %>
+	<dl>
+		<dt>
+			<%= f.label :name, 'Name' %>
+		</dt>
+		<dd>
+			<%= f.text_field :name %>
+		</dd>
+		<dt>
+			<%= f.label :kind, 'Category For' %>
+		</dt>
+		<dd>
+			<%= f.select :kind, Category::KINDS.map{|kind| [kind.to_s.humanize, kind]} %>
+		</dd>
+	</dl>
+	<%= f.submit 'Create' %>
+<% end %>

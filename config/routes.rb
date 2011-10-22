@@ -10,7 +10,10 @@ Webstore::Application.routes.draw do |map|
   map.resource :about, :only => [:show]
   map.namespace :admin do |admin|
     admin.root :controller => :base, :action => :show
-    admin.resource :base, :only => [:create]
+    admin.resource :base, :only => [:update]
     admin.resources :boilers, :only => [:new, :create]
+    admin.resources :services, :only => [:new, :create]
+    admin.resources :categories, :only => [:new, :create]
+    admin.resources :settings, :only => [:new, :create, :index]
   end
 end

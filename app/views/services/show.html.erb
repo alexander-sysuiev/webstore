@@ -1,0 +1,4 @@
+<div class="service-header"><%= @service.name %></div>
+<div class="service-picture">
+	<%= image_tag @service.picture.present? ? @service.picture.photo.url(:preview) : '/images/tab.gif' %>
+</div>

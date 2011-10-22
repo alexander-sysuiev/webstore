@@ -1,0 +1,12 @@
+<h1>Create new setting</h1>
+<% form_for :setting, :url => admin_settings_path do |f| %>
+	<dl>
+		<dt>
+			<%= f.label :name, 'Name' %>
+		</dt>
+		<dd>
+			<%= f.text_field :name %>
+		</dd>
+	</dl>
+	<%= f.submit 'Create' %>
+<% end %>
