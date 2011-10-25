@@ -1,0 +1,4 @@
+<% content_for :header do%>
+	<h1>Edit <%= @service.name %> Service</h1>
+<% end %>
+<%= render 'form', :service => @service, :path => admin_service_path(@service) %>

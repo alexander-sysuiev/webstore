@@ -1,4 +1,9 @@
-<div class="service-header"><%= @service.name %></div>
+<% content_for :header do%>
+	<h1><div class="service-header"><%= @service.name %></div></h1>
+<% end %>
+<% if admin_signed_in? %>
+	<div class="edit-link"><%= link_to 'Edit', edit_admin_service_path(@service) %></div>
+<% end %>
 <div class="service-picture">
 	<%= image_tag @service.picture.present? ? @service.picture.photo.url(:preview) : '/images/tab.gif' %>
 </div>

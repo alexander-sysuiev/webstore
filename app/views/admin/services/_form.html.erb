@@ -1,0 +1,41 @@
+<% form_for service, :url => path, :html => { :multipart => true } do |f| %>
+	<% if service.picture.present? %>
+		<%= image_tag service.picture.photo.url(:preview) %>
+	<% end %>
+	<dl>
+		<dt>
+			<%= f.label :name, 'Name' %>
+		</dt>
+		<dd>
+			<%= f.text_field :name %>
+		</dd>
+		<dt>
+			<%= f.label :price, 'Price' %>
+		</dt>
+		<dd>
+			<%= f.text_field :price %>
+		</dd>
+		<dt>
+			<%= f.label :category_id, 'Category' %>
+		</dt>
+		<dd>
+			<%= f.select :category_id, Category.services.map{|category| [category.name, category.id]} %>
+		</dd>
+		<dt>
+			<%= f.label :boiler_id, 'For Boiler' %>
+		</dt>
+		<dd>
+			<%= f.select :boiler_id, [['', nil]] + Boiler.all.map{ |boiler| [boiler.name, boiler.id] } %>
+		</dd>
+
+		<%= f.fields_for :picture do |pic| %>
+			<dt>
+				<%= pic.label :photo, 'Picture' %>
+			</dt>
+			<dd>
+				<%= pic.file_field :photo %>
+			</ds>
+		<% end %>
+	</dl>
+	<%= f.submit 'Save' %>
+<% end %>

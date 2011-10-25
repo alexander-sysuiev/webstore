@@ -1,0 +1,4 @@
+<% content_for :header do%>
+	<h1>Edit <%= @boiler.name %> Boiler</h1>
+<% end %>
+<%= render 'form', :boiler => @boiler, :path => admin_boiler_path(@boiler) %>

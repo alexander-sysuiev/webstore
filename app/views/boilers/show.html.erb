@@ -1,9 +1,16 @@
-<div class="boiler-header"><%= @boiler.name %></div>
+<% content_for :header do%>
+	<h1><div class="boiler-header"><%= @boiler.name %></div></h1>
+<% end %>
+
+<% if admin_signed_in? %>
+  <div class="edit-link"><%= link_to 'Edit', edit_admin_boiler_path(@boiler) %></div>
+<% end %>
 <div class="boiler-picture">
 	<%= image_tag @boiler.picture.present? ? @boiler.picture.photo.url(:preview) : '/images/tab.gif' %>
 </div>
-<div>Settings</div>
+
 <% if @settings.any? %>
+	<div>Settings</div>
 	<dl>
 		<% @settings.each do |setting| %>
 			<dt><%= setting.name %></dt>
