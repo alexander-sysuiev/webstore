@@ -41,6 +41,7 @@
 			<%= select_tag 'boiler[settings][]setting_name_id',
 							options_from_collection_for_select(@settings_names, "id", "name", setting.setting_name_id) %>
 			<%= text_field_tag 'boiler[settings][]value', setting.value %>
+			<%= link_to 'remove', '#', :class => 'remove-setting' %>
 		</div>
 	<% end %>
 
@@ -55,4 +56,5 @@
 <div class="setting-creation" id="setting-prototype" style="display: none">
 	<%= select_tag 'boiler[settings][]setting_name_id', options_from_collection_for_select(@settings_names, "id", "name") %>
 	<%= text_field_tag 'boiler[settings][]value' %>
+	<%= link_to 'remove', '#', :class => 'remove-setting' %>
 </div>
