@@ -28,7 +28,7 @@ class Admin::BoilersController < Admin::BaseController
 		boiler.update_attributes attrs
 
 		Setting.delete_all ["id IN (?)", boiler.settings.map(&:id)]
-		boiler.settings.create settings_attrs
+		boiler.settings.create settings_attrs if settings_attrs.present?
 
 		redirect_to category_boiler_path(boiler.category_id, boiler.id)
 	end
