@@ -11,6 +11,7 @@ gem 'rspec-rails'
 gem 'rmagick'
 gem 'devise'
 gem 'jquery-rails'
+gem 'heroku'
 
 # Use unicorn as the web server
 # gem 'unicorn'
