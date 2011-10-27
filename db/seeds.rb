@@ -1,6 +1,8 @@
-[:category, :boiler, :service, :picture, :admin, :setting_name].each do |table|
+[:category, :boiler, :service, :admin, :setting_name].each do |table|
 	table.to_s.camelize.constantize.send(:delete_all)
 end
+
+Picture.all.each(&:destroy)
 
 admin = Admin.create(:first_name => 'Store',
   				     :last_name => 'Admin',

@@ -22,6 +22,7 @@ class Admin::BoilersController < Admin::BaseController
 		settings_attrs = params[:boiler].delete(:settings)
 
 		picture = Picture.create params[:boiler].delete(:picture) if params[:boiler][:picture].present?
+		boiler.picture.destroy if picture.present?
 		attrs = picture.nil? ? params[:boiler] : params[:boiler].merge(:picture => picture)
 		
 		boiler.update_attributes attrs
