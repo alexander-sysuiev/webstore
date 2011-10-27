@@ -6,7 +6,7 @@ class Picture < ActiveRecord::Base
 					    :s3_credentials => {
 					      :access_key_id => ENV['S3_KEY'],
 					      :secret_access_key => ENV['S3_SECRET']
-					    } 
+					    },
 					 	:styles => { :thumb=> "100x100#", :preview  => "400x400>" },
 					 	:url => "/assets/pictures/:id/:style/:basename.:extension",
 					 	:path => ":rails_root/public/assets/pictures/:id/:style/:basename.:extension"
