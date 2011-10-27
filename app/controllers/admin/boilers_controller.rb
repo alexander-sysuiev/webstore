@@ -19,10 +19,15 @@ class Admin::BoilersController < Admin::BaseController
 
 	def update
 		boiler = Boiler.find params[:id]
+		settings_attrs = params[:boiler].delete(:settings)
+
 		picture = Picture.create params[:boiler].delete(:picture) if params[:boiler][:picture].present?
 		attrs = picture.nil? ? params[:boiler] : params[:boiler].merge(:picture => picture)
 		
 		boiler.update_attributes attrs
+
+		Setting.delete_all ["id IN (?)", boiler.settings.map(&:id)]
+		boiler.settings.create settings_attrs
 
 		redirect_to category_boiler_path(boiler.category_id, boiler.id)
 	end

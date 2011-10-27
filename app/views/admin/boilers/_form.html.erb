@@ -37,7 +37,7 @@
 
 	<% boiler.settings.each do |setting| %>
 		<div class="setting-creation">
-			<%= hidden_field_tag 'boiler[settings][]setting_name_id', setting.id %>
+			<%= hidden_field_tag 'boiler[settings][]id', setting.id %>
 			<%= select_tag 'boiler[settings][]setting_name_id',
 							options_from_collection_for_select(@settings_names, "id", "name", setting.setting_name_id) %>
 			<%= text_field_tag 'boiler[settings][]value', setting.value %>
