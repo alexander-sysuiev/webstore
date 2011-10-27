@@ -1,11 +1,16 @@
 class Admin::BoilersController < Admin::BaseController
 	def new
 		@boiler = Boiler.new
+		@settings_names = SettingName.all
 	end
 
 	def create
 		picture = Picture.create params[:boiler].delete(:picture)
+		settings_attrs = params[:boiler].delete(:settings)
 		boiler = Boiler.create params[:boiler].merge(:picture => picture)
+		settings_attrs.each do |setting|
+			boiler.settings.create setting
+		end
 		redirect_to category_boiler_path(:category_id => boiler.category_id, :id => boiler.id)
 	end
 

@@ -10,6 +10,7 @@ gem 'paperclip'
 gem 'rspec-rails'
 gem 'rmagick'
 gem 'devise'
+gem 'jquery-rails'
 
 # Use unicorn as the web server
 # gem 'unicorn'

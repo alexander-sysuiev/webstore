@@ -1,3 +1,4 @@
+<%= javascript_include_tag 'pages/boiler.new' %>
 <% form_for boiler, :url => path, :html => { :multipart => true } do |f| %>
 	<% if boiler.picture.present? %>
 		<%= image_tag boiler.picture.photo.url(:preview) %>
@@ -31,8 +32,18 @@
 				<%= pic.file_field :photo %>
 			</ds>
 		<% end %>
+
 	</dl>
+
+	<div id="settings-area">
+	</div>
+	<%= link_to 'Add Setting', '#', :class => 'setting-add-link' %>
 
 
 	<%= f.submit 'Save' %>
 <% end %>
+
+<div class="setting-creation" id="setting-prototype" style="display: none">
+	<%= select_tag 'boiler[settings][]setting_name_id', options_from_collection_for_select(@settings_names, "id", "name") %>
+	<%= text_field_tag 'boiler[settings][]value' %>
+</div>
