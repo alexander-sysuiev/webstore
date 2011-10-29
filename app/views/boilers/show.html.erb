@@ -11,10 +11,16 @@
 
 <% if @settings.any? %>
 	<div>Settings</div>
-	<dl>
+	<dl id='settings'>
 		<% @settings.each do |setting| %>
-			<dt><%= setting.name %></dt>
-			<dd><%= setting.value %></dd>
+			<div class="setting-field">
+				<dt class='setting-name'><%= setting.name %></dt>
+				<dd class='setting-value'><%= setting.value %></dd>
+			</div>
 		<% end %>
 	</dl>
 <% end %>
+
+<div class="description">
+	<%= @boiler.description %>
+</div>

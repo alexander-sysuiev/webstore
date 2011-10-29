@@ -7,3 +7,9 @@
 <div class="service-picture">
 	<%= image_tag @service.picture.present? ? @service.picture.photo.url(:preview) : '/images/tab.gif' %>
 </div>
+<div class="price">
+	<%= "Price: #{@service.price.to_f / 100}$" %>
+</div>
+<div class="description">
+	<%= @service.description %>
+</div>

@@ -1,6 +1,16 @@
 <% if @boilers.any? %>
-  <% @boilers.each do |boiler| %>
-    <div><%= link_to boiler.name, category_boiler_path(boiler.category_id, boiler.id) %></div>
+  <% @boilers.each_with_index do |boiler, index| %>
+  	<% if index % 4 == 0 %>
+  		<div class="goods-preview">
+  	<% end %>
+    <div class="boiler-preview">
+    	<%= image_tag boiler.picture.photo.url(:thumb), :class => "boiler-image" %>
+    	<div><%= "$#{boiler.price}" %></div>
+    	<%= link_to boiler.name, category_boiler_path(boiler.category_id, boiler.id) %>
+    </div>
+    <% if index % 4 == 3 || boiler == @boilers.last%>
+  		</div>
+  	<% end %>
   <% end %>
 <% else %>
   <h1>No boilers in database</h1>

@@ -6,11 +6,35 @@
   text-align: center;
 }
 
+.boiler-image {
+  display: block;
+}
+
+.boiler-preview {
+  display: inline-block;
+}
+
+.service-image {
+  display: block;
+}
+
+.service-preview {
+  display: inline-block;
+}
+
 #body-wrapper {
   width: 70%;
   margin: 15px auto;
   background-color: #B0B0D0;
   padding-bottom: 0;
+}
+
+.setting-name {
+  display: inline-block;
+}
+
+.setting-value {
+  display: inline-block;
 }
 
 #about-wrapper {

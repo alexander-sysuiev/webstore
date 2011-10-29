@@ -35,22 +35,27 @@ end
 
 boilers = Boiler.create(
 	[
-		{ :name => 'NK51', :price => 100.50, :category_id => coal_boilers.id, :picture => boiler_pictures[0]},
-		{ :name => 'PM12', :price => 13.43, :category_id => coal_boilers.id, :picture => boiler_pictures[1] },
-		{ :name => 'ALR44F', :price => 22.30, :category_id => gas_boilers.id, :picture => boiler_pictures[2] },
-		{ :name => 'Shit Happens', :price => 64.70, :category_id => gas_boilers.id, :picture => boiler_pictures[3] },
-		{ :name => 'BoilMe', :price => 200, :category_id => gas_boilers.id, :picture => boiler_pictures[4] },
-		{ :name => 'Gaser', :price => 50, :category_id => wood_boilers.id, :picture => boiler_pictures[5] }
+		{ :name => 'NK51', :price => 100.50, :category_id => coal_boilers.id, :picture => boiler_pictures[0], :description => 'Boiler1'},
+		{ :name => 'PM12', :price => 13.43, :category_id => coal_boilers.id, :picture => boiler_pictures[1], :description => 'Boiler2' },
+		{ :name => 'ALR44F', :price => 22.30, :category_id => gas_boilers.id, :picture => boiler_pictures[2], :description => 'Boiler3' },
+		{ :name => 'Shit Happens', :price => 64.70, :category_id => gas_boilers.id, :picture => boiler_pictures[3], :description => 'Boiler4' },
+		{ :name => 'BoilMe', :price => 200, :category_id => gas_boilers.id, :picture => boiler_pictures[4], :description => 'Boiler5' },
+		{ :name => 'Gaser', :price => 50, :category_id => wood_boilers.id, :picture => boiler_pictures[5], :description => 'Boiler6' }
 	]
 )
 
 services = Service.create(
 	[
-		{ :name => 'Wall Mounting', :category_id => mounting.id, :picture => service_pictures[0]},
-		{ :name => 'Floar Mounting', :category_id => mounting.id, :picture => service_pictures[1]},
-		{ :name => 'Ceilling Mounting', :category_id => mounting.id, :picture => service_pictures[2]},
-		{ :name => 'Cooler Rapair', :category_id => repair.id, :picture => service_pictures[3]},
-		{ :name => 'Block Repair', :category_id => repair.id, :picture => service_pictures[4]},
-		{ :name => 'Brain Repairment', :category_id => repair.id, :picture => service_pictures[5]},
+		{ :price => 100.50, :name => 'Wall Mounting', :category_id => mounting.id, :picture => service_pictures[0], :description => 'Service1'},
+		{ :price => 33.10, :name => 'Floar Mounting', :category_id => mounting.id, :picture => service_pictures[1], :description => 'Service1'},
+		{ :price => 41.00, :name => 'Ceilling Mounting', :category_id => mounting.id, :picture => service_pictures[2], :description => 'Service1'},
+		{ :price => 1.20, :name => 'Cooler Rapair', :category_id => repair.id, :picture => service_pictures[3], :description => 'Service1'},
+		{ :price => 67.30, :name => 'Block Repair', :category_id => repair.id, :picture => service_pictures[4], :description => 'Service1'},
+		{ :price => 84.43, :name => 'Brain Repairment', :category_id => repair.id, :picture => service_pictures[5], :description => 'Service1'},
 	]
 )
+
+boilers.each_with_index do |boiler, index|
+	boiler.settings.create :setting_name => SettingName.first, :value => index * 10
+end
+
