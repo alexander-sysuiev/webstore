@@ -8,7 +8,7 @@
 					<% quantity = product[1] %>
 					<% price = boiler.price * quantity %>
 					<% total_price += price %>
-					<tr class="boiler">
+					<tr class="cart-boiler">
 						<td><%= "#{boiler.name}" %></td>
 						<td>
 							<%= link_to '+', '#', :class => 'buy-button',
@@ -25,9 +25,12 @@
 				<% end %>
 			<% end %>
 		<% end %>
-		<tr class="boiler">
+		<tr class="cart-total">
 			<td colspan="2">Total:</td>
 			<td><%= "$#{total_price}" %></td>
+		</tr>
+		<tr class="cart-remove">
+			<td colspan="3"><%= link_to 'Clear', "#", :class => "clear-cart" %></td>
 		</tr>
 	</table>
 <% end %>

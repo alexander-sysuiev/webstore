@@ -16,4 +16,10 @@ $(function() {
 
 		return false;
 	});
+
+	$(".clear-cart").live("click", function() {
+		$.post('/cart/clear.js');
+
+		return false;
+	});
 });
