@@ -1,0 +1,33 @@
+<% if session[:goods].present? && session[:goods].to_a.flatten[1].present?%>
+	<% total_price = 0 %>
+	<table>
+		<% session[:goods].each do |type| %>
+			<% if type[0] == 'boiler' %>
+				<% type[1].each do |product| %>
+					<% boiler = Boiler.find(product[0]) %>
+					<% quantity = product[1] %>
+					<% price = boiler.price * quantity %>
+					<% total_price += price %>
+					<tr class="boiler">
+						<td><%= "#{boiler.name}" %></td>
+						<td>
+							<%= link_to '+', '#', :class => 'buy-button',
+												  "data-product-id" => boiler.id,
+												  "data-product-type" => 'boiler' %>
+							<%= "#{quantity}" %>
+							<%= link_to '-', '#', :class => 'quantity-decrease',
+												  "data-product-id" => boiler.id,
+												  "data-product-type" => :boiler %>
+						</td>
+						<td><%= "$#{price}" %></td>
+
+					</tr>
+				<% end %>
+			<% end %>
+		<% end %>
+		<tr class="boiler">
+			<td colspan="2">Total:</td>
+			<td><%= "$#{total_price}" %></td>
+		</tr>
+	</table>
+<% end %>
