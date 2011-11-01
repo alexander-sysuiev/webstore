@@ -2,6 +2,14 @@
   display: inline;
 }
 
+#customer-basket{
+  background-color: #B0B0D0;
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 15px;
+  margin-left: 10px;
+}
+
 #store-logo {
   text-align: center;
 }
@@ -24,9 +32,12 @@
 
 #body-wrapper {
   width: 70%;
-  margin: 15px auto;
+  margin-top: 15px;
+  margin-left: 70px;
   background-color: #B0B0D0;
   padding-bottom: 0;
+  display: inline-block;
+  vertical-align: top;
 }
 
 .setting-name {

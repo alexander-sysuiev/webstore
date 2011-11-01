@@ -24,3 +24,5 @@
 <div class="description">
 	<%= @boiler.description %>
 </div>
+
+<%= link_to 'Buy', '#', :class => 'buy-button', "data-product-id" => @boiler.id, "data-product-type" => 'boiler' %>
