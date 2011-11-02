@@ -1,0 +1,5 @@
+<% @orders.each do |order| %>
+	<div>
+		<%= link_to "$#{order.price} #{order.phone}", admin_order_path(order) %>
+	</div>
+<% end %>

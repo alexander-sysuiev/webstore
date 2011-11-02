@@ -12,6 +12,7 @@ Webstore::Application.routes.draw do |map|
   map.resource :cart, :only => [:create], :member => {:decrease => :post, :clear => :post}
   map.namespace :admin do |admin|
     admin.root :controller => :base, :action => :show
+    admin.resources :orders, :only => [:index, :show]
     admin.resources :base, :controller => :base, :only => [:update]
     admin.resources :boilers, :only => [:new, :create, :edit, :update]
     admin.resources :services, :only => [:new, :create, :edit, :update]

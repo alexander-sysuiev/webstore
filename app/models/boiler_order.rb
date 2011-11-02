@@ -1,0 +1,2 @@
+class BoilerOrder < GoodsOrder
+end

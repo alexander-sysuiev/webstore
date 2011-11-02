@@ -1,0 +1,25 @@
+<% @boilers.each do |boiler| %>
+	<div>
+		<%= "#{Boiler.find(boiler.good_id).name}  #{boiler.quantity}  $#{boiler.price}" %>
+	</div>
+<% end %>
+<dl>
+	<dt>
+		Email
+	</dt>
+	<dd>
+		<%= @order.email %>
+	<dd>
+	<dt>
+		Phone
+	</dt>
+	<dd>
+		<%= @order.phone %>
+	<dd>
+	<dt>
+		Price
+	</dt>
+	<dd>
+		<%= '$' + @order.price.to_s %>
+	<dd>
+</dl>
