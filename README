@@ -1,20 +1,3 @@
-Startup webstore projects.
-Insufficient of ideas are blocking current work.
-Plans:
- 0. Add orders
- 4. Add orders form
- 5. Do some model refactoring
- 6. Investigate designs
- 7. Add addresses
- 8. Add Rspecs
- 9. Remove asset files on seeding
- 12. Add vendor
- 13. Add edit links to show
- 14. Add Jquery settings adding
- 15. Change settings showing
- 16. Add Description field
- 17. Add JS preview to picture on creation
- 18. Add parameters to show view
- 19. Create preview pictures on indexes
- 20. Add settings seeding.
- 
+SHIT HITS FAN!!
+Base scaffolding is done.
+Time to refactor this shit.
