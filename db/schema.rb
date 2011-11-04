@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111101215136) do
+ActiveRecord::Schema.define(:version => 20111103061334) do
 
   create_table "admins", :force => true do |t|
     t.string   "first_name"
@@ -57,11 +57,14 @@ ActiveRecord::Schema.define(:version => 20111101215136) do
 
   create_table "orders", :force => true do |t|
     t.string   "email"
-    t.string   "phone",                                     :null => false
-    t.decimal  "price",      :precision => 10, :scale => 2, :null => false
+    t.string   "phone",                                       :null => false
+    t.decimal  "price",        :precision => 10, :scale => 2, :null => false
     t.integer  "address_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "name",                                        :null => false
+    t.string   "order_number"
+    t.boolean  "proceed"
   end
 
   create_table "pictures", :force => true do |t|

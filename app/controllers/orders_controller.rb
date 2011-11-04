@@ -1,4 +1,4 @@
-class OrdersController < ApplicationController
+class OrdersController < WorkflowController
 	def new
 		@order = Order.new
 	end

@@ -5,4 +5,13 @@ class Order < ActiveRecord::Base
 	has_many :services, :through => :service_orders
 	belongs_to :address_id
 	has_many :goods_orders
+
+	after_create :generate_serial
+
+private
+	
+	def generate_serial
+		serial = "#{created_at.to_i.to_s[0..4]}-#{created_at.to_i.to_s[5..9]}#{self.id.to_s}"
+		self.update_attributes! :order_number => serial
+	end
 end

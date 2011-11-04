@@ -1,5 +1,22 @@
-<% @orders.each do |order| %>
-	<div>
-		<%= link_to "$#{order.price} #{order.phone}", admin_order_path(order) %>
-	</div>
+<% if @orders.any? %>
+	<table>
+		<thead>
+			<th>Order Number</th>
+			<th>Customer Name</th>
+			<th>Price</th>
+			<th>Phone</th>
+			<th></th>
+		</thead>
+		<tbody>
+			<% @orders.each do |order| %>
+				<tr>
+					<td><%= order.order_number %></td>
+					<td><%= order.name %></td>
+					<td><%= order.price %></td>
+					<td><%= order.phone %></td>
+					<td><%= link_to "Details", admin_order_path(order) %></td>
+				</tr>
+			<% end %>
+		</tbody>
+	</table>
 <% end %>

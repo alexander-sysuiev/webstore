@@ -29,6 +29,12 @@
 		<%= hidden_field_tag "order[price]", total_price %>
 		<dl>
 			<dt>
+				<%= form.label :name, 'Your Name' %>
+			</dt>
+			<dd>
+				<%= form.text_field :name %>
+			</dd>
+			<dt>
 				<%= form.label :email %>
 			</dt>
 			<dd>
