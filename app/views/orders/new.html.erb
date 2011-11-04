@@ -4,9 +4,13 @@
 		<% total_price = 0 %>
 		<table>
 			<% session[:goods].each do |type| %>
-				<% if type[0] == 'boiler' %>
+				<tr class="cart-type">
+					<td colspan="3"><%= type[0].camelize.pluralize %></td>
+				</tr>
+				<%# Common with cart partial %>
+				<%# if type[0] == 'boiler' %>
 					<% type[1].each do |product| %>
-						<% boiler = Boiler.find(product[0]) %>
+						<% boiler = type[0].camelize.constantize.find(product[0]) %>
 						<% quantity = product[1] %>
 						<% price = boiler.price * quantity %>
 						<% total_price += price %>
@@ -19,7 +23,7 @@
 
 						</tr>
 					<% end %>
-				<% end %>
+				<%# end %>
 			<% end %>
 			<tr class="cart-total">
 				<td colspan="2">Total:</td>
