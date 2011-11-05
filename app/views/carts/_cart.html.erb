@@ -1,31 +1,7 @@
 <% if session[:goods].present? && session[:goods].to_a.flatten[1].present?%>
 	<% total_price = 0 %>
 	<table>
-		<% session[:goods].each do |type| %>
-			<tr class="cart-type">
-				<td colspan="3"><%= type[0].camelize.pluralize %></td>
-			</tr>
-			<% type[1].each do |product| %>
-				<% boiler = type[0].camelize.constantize.find(product[0]) %>
-				<% quantity = product[1] %>
-				<% price = boiler.price * quantity %>
-				<% total_price += price %>
-				<tr class="cart-boiler">
-					<td><%= "#{boiler.name}" %></td>
-					<td>
-						<%= link_to '+', '#', :class => 'quantity-increase',
-											  "data-product-id" => boiler.id,
-											  "data-product-type" => type[0] %>
-						<%= "#{quantity}" %>
-						<%= link_to '-', '#', :class => 'quantity-decrease',
-											  "data-product-id" => boiler.id,
-											  "data-product-type" => type[0] %>
-					</td>
-					<td><%= format_price price %></td>
 
-				</tr>
-			<% end %>
-		<% end %>
 		<tr class="cart-total">
 			<td colspan="2">Total:</td>
 			<td><%= format_price total_price %></td>
