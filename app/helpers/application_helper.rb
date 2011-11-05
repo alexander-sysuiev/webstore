@@ -11,6 +11,6 @@ module ApplicationHelper
 	end
 
 	def format_price(price)
-		number_to_currency price, :unit => 'грн.', :format => "%n %u"
+		number_to_currency price, :unit => "грн", :format => "%n %u"
 	end
 end
