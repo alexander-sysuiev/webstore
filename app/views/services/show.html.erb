@@ -11,7 +11,7 @@
 	<div class="price-show">
 		<%= format_price(@service.price) %>
 	</div>
-	<%= link_to 'Buy', '#', :class => 'buy-button', "data-product-id" => @service.id, "data-product-type" => 'service' %>
+	<%= buy_button @service %>
 </div>
 <div class="description">
 	<%= @service.description %>

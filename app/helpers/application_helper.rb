@@ -14,4 +14,12 @@ module ApplicationHelper
 	def format_price(price)
 		number_to_currency price, :unit => "грн.", :format => "%n %u"
 	end
+
+	def buy_button(model)
+		 link_to 'Buy',
+		 		 '#',
+		 		 :class => 'buy-button',
+		 		 "data-product-id" => model.id,
+		 		 "data-product-type" => model.class.to_s.downcase
+	end
 end
