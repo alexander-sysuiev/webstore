@@ -1,0 +1,2 @@
+class ServiceOrder < GoodsOrder
+end

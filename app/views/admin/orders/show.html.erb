@@ -3,6 +3,11 @@
 		<%= "#{Boiler.find(boiler.good_id).name}  #{boiler.quantity}  #{format_price boiler.price}" %>
 	</div>
 <% end %>
+<% @services.each do |service| %>
+	<div>
+		<%= "#{Service.find(service.good_id).name}  #{service.quantity}  #{format_price service.price}" %>
+	</div>
+<% end %>
 <dl>
 	<dt>
 		Order Number

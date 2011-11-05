@@ -10,8 +10,9 @@ class OrdersController < WorkflowController
 
 			type[1].each do |product|
 				good = type[0].camelize.constantize.find(product[0])
+				joining_class = (type[0].camelize + 'Order').constantize
 				quantity = product[1].to_i
-				BoilerOrder.create(:good_id => good.id, :price => good.price, :quantity => quantity, :type => type[0].to_s, :order_id => order.id)
+				joining_class.create(:good_id => good.id, :price => good.price, :quantity => quantity, :type => type[0].to_s, :order_id => order.id)
 			end
 		end
 
