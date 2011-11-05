@@ -1,19 +1,7 @@
 <% if @services.any? %>
-  <% @services.each_with_index do |service, index| %>
-  	<% if index % 4 == 0 %>
-  		<div class="goods-preview">
-  	<% end %>
-
-    <div class="service-preview">
-    	<%= image_tag service.picture.photo.url(:thumb), :class => "service-image" %>
-    	<div><%= "$#{service.price}" %></div>
-    	<%= link_to service.name, category_service_path(service.category_id, service.id) %>
-    </div>
-
-     <% if index % 4 == 3 || service == @services.last%>
-  		</div>
-  	<% end %>
-  <% end %>
+  <div class="goods-preview">
+    <%= render 'boilers/product_list', :products => @services %>
+  </div>
 <% else %>
   <h1>No services in database</h1>
 <% end %>

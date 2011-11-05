@@ -1,0 +1,11 @@
+<% products.each_slice(Boiler::PER_PAGE) do |slice| %>
+  <div class="goods-preview">
+    <% slice.each do |product| %>
+      <div class="boiler-preview">
+      	<%= image_tag product.picture.photo.url(:thumb), :class => "boiler-image" %>
+      	<div><%= "$#{product.price}" %></div>
+      	<%= product_link(product) %>
+      </div>
+    <% end %>
+	</div>  
+<% end %>
