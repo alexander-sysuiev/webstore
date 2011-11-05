@@ -13,7 +13,7 @@
 				<tr class="cart-boiler">
 					<td><%= "#{boiler.name}" %></td>
 					<td>
-						<%= link_to '+', '#', :class => 'buy-button',
+						<%= link_to '+', '#', :class => 'quantity-increase',
 											  "data-product-id" => boiler.id,
 											  "data-product-type" => type[0] %>
 						<%= "#{quantity}" %>
