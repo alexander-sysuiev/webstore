@@ -2,6 +2,10 @@
   display: inline;
 }
 
+.goods-preview {
+  margin-bottom: 20px;
+}
+
 #customer-basket{
   background-color: #B0B0D0;
   display: inline-block;
