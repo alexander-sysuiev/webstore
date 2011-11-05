@@ -21,14 +21,14 @@
 											  "data-product-id" => boiler.id,
 											  "data-product-type" => type[0] %>
 					</td>
-					<td><%= "$#{price}" %></td>
+					<td><%= format_price price %></td>
 
 				</tr>
 			<% end %>
 		<% end %>
 		<tr class="cart-total">
 			<td colspan="2">Total:</td>
-			<td><%= "$#{total_price}" %></td>
+			<td><%= format_price total_price %></td>
 		</tr>
 		<tr class="cart-remove">
 			<td><%= link_to 'Clear', "#", :class => "clear-cart" %></td>

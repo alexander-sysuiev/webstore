@@ -1,6 +1,6 @@
 <% @boilers.each do |boiler| %>
 	<div>
-		<%= "#{Boiler.find(boiler.good_id).name}  #{boiler.quantity}  $#{boiler.price}" %>
+		<%= "#{Boiler.find(boiler.good_id).name}  #{boiler.quantity}  #{format_price boiler.price}" %>
 	</div>
 <% end %>
 <dl>
@@ -32,6 +32,6 @@
 		Price
 	</dt>
 	<dd>
-		<%= '$' + @order.price.to_s %>
+		<%= format_price @order.price %>
 	<dd>
 </dl>

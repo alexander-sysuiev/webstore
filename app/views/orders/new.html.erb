@@ -17,14 +17,14 @@
 						<td>
 							<%= "#{quantity}" %>
 						</td>
-						<td><%= "$#{price}" %></td>
+						<td><%= format_price price %></td>
 
 					</tr>
 				<% end %>
 			<% end %>
 			<tr class="cart-total">
 				<td colspan="2">Total:</td>
-				<td><%= "$#{total_price}" %></td>
+				<td><%= format_price total_price %></td>
 			</tr>
 		</table>
 		<%= hidden_field_tag "order[price]", total_price %>

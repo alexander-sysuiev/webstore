@@ -3,7 +3,7 @@
     <% slice.each do |product| %>
       <div class="boiler-preview">
       	<%= image_tag product.picture.photo.url(:thumb), :class => "boiler-image" %>
-      	<div><%= "$#{product.price}" %></div>
+      	<div><%= format_price product.price %></div>
       	<%= product_link(product) %>
       </div>
     <% end %>

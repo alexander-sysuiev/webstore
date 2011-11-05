@@ -8,6 +8,9 @@
 <div class="boiler-picture">
 	<%= image_tag @boiler.picture.present? ? @boiler.picture.photo.url(:preview) : '/images/tab.gif' %>
 </div>
+<div class='price-show'>
+	<%= format_price @boiler.price %>
+</div>
 
 <% if @settings.any? %>
 	<div>Settings</div>

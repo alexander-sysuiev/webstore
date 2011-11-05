@@ -12,7 +12,7 @@
 				<tr>
 					<td><%= order.order_number %></td>
 					<td><%= order.name %></td>
-					<td><%= order.price %></td>
+					<td><%= format_price order.price %></td>
 					<td><%= order.phone %></td>
 					<td><%= link_to "Details", admin_order_path(order) %></td>
 				</tr>
