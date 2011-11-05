@@ -56,12 +56,12 @@ boilers = Boiler.create(
 
 services = Service.create(
 	[
-		{ :price => 100.50, :name => 'Wall Mounting', :category_id => mounting.id, :picture => service_pictures[0], :description => 'Service1'},
-		{ :price => 33.10, :name => 'Floar Mounting', :category_id => mounting.id, :picture => service_pictures[1], :description => 'Service1'},
-		{ :price => 41.00, :name => 'Ceilling Mounting', :category_id => mounting.id, :picture => service_pictures[2], :description => 'Service1'},
-		{ :price => 1.20, :name => 'Cooler Rapair', :category_id => repair.id, :picture => service_pictures[3], :description => 'Service1'},
-		{ :price => 67.30, :name => 'Block Repair', :category_id => repair.id, :picture => service_pictures[4], :description => 'Service1'},
-		{ :price => 84.43, :name => 'Brain Repairment', :category_id => repair.id, :picture => service_pictures[5], :description => 'Service1'},
+		{ :price => 100.50, :name => 'Wall Mounting', :category_id => mounting.id, :picture => service_pictures[0], :description => description},
+		{ :price => 33.10, :name => 'Floar Mounting', :category_id => mounting.id, :picture => service_pictures[1], :description => description},
+		{ :price => 41.00, :name => 'Ceilling Mounting', :category_id => mounting.id, :picture => service_pictures[2], :description => description},
+		{ :price => 1.20, :name => 'Cooler Rapair', :category_id => repair.id, :picture => service_pictures[3], :description => description},
+		{ :price => 67.30, :name => 'Block Repair', :category_id => repair.id, :picture => service_pictures[4], :description => description},
+		{ :price => 84.43, :name => 'Brain Repairment', :category_id => repair.id, :picture => service_pictures[5], :description => description},
 	]
 )
 

@@ -11,7 +11,7 @@
   margin-top: 15px;
 }
 
-.boiler-attribures {
+.boiler-attribures, .service-attribures {
   display: inline-block;
   vertical-align: top;
   padding-left: 10px;
@@ -33,7 +33,7 @@
   color: #31187E;
 }
 
-.boiler-picture {
+.boiler-picture, .service-picture {
   display: inline-block;
 }
 
