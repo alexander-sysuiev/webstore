@@ -8,24 +8,27 @@
 <div class="boiler-picture">
 	<%= image_tag @boiler.picture.present? ? @boiler.picture.photo.url(:preview) : '/images/tab.gif' %>
 </div>
-<div class='price-show'>
-	<%= format_price @boiler.price %>
-</div>
 
-<% if @settings.any? %>
-	<div>Settings</div>
-	<dl id='settings'>
-		<% @settings.each do |setting| %>
-			<div class="setting-field">
-				<dt class='setting-name'><%= setting.name %></dt>
-				<dd class='setting-value'><%= setting.value %></dd>
-			</div>
-		<% end %>
-	</dl>
-<% end %>
+<div class="boiler-attribures">
+	<div class='price-show'>
+		<%= format_price @boiler.price %>
+	</div>
+
+	<% if @settings.any? %>
+		<dl id='settings'>
+			<% @settings.each do |setting| %>
+				<div class="setting-field">
+					<dt class='setting-name'><%= setting.name %></dt>
+					<dd class='setting-value'><%= setting.value %></dd>
+				</div>
+			<% end %>
+		</dl>
+	<% end %>
+	<%= link_to 'Buy', '#', :class => 'buy-button', "data-product-id" => @boiler.id, "data-product-type" => 'boiler' %>
+</div>
 
 <div class="description">
 	<%= @boiler.description %>
 </div>
 
-<%= link_to 'Buy', '#', :class => 'buy-button', "data-product-id" => @boiler.id, "data-product-type" => 'boiler' %>
+
