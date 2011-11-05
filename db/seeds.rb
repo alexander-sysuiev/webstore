@@ -33,14 +33,24 @@ service_pictures = []
 	service_pictures << Picture.create(:photo => f)
 end
 
+description = <<-EOS
+	The direct vent, sealed combustion boiler has an ultra-high 97.3% efficiency and is ENERGY STAR approved!
+	The Peerless PUREFIRE PF-110, now available in six sizes, has ASME and ETL certifications for both the
+	U.S. and Canada and is the most thoroughly tested high efficiency boiler on the market!
+	A unique condensate system with built-in neutralizer component and float switch protection is a top
+	feature of the boiler. Features and Benefits of Peerless PUREFIRE PF boiler at a glance:
+	Stainless steel heat exchanger.
+	The heart of the Peerless PureFire boiler is the ASME-certified stainless steel heat exchanger.
+EOS
+
 boilers = Boiler.create(
 	[
-		{ :name => 'NK51', :price => 100.50, :category_id => coal_boilers.id, :picture => boiler_pictures[0], :description => 'Boiler1'},
-		{ :name => 'PM12', :price => 13.43, :category_id => coal_boilers.id, :picture => boiler_pictures[1], :description => 'Boiler2' },
-		{ :name => 'ALR44F', :price => 22.30, :category_id => gas_boilers.id, :picture => boiler_pictures[2], :description => 'Boiler3' },
-		{ :name => 'Shit Happens', :price => 64.70, :category_id => gas_boilers.id, :picture => boiler_pictures[3], :description => 'Boiler4' },
-		{ :name => 'BoilMe', :price => 200, :category_id => gas_boilers.id, :picture => boiler_pictures[4], :description => 'Boiler5' },
-		{ :name => 'Gaser', :price => 50, :category_id => wood_boilers.id, :picture => boiler_pictures[5], :description => 'Boiler6' }
+		{ :name => 'NK51', :price => 100.50, :category_id => coal_boilers.id, :picture => boiler_pictures[0], :description => description},
+		{ :name => 'PM12', :price => 13.43, :category_id => coal_boilers.id, :picture => boiler_pictures[1], :description => description },
+		{ :name => 'ALR44F', :price => 22.30, :category_id => gas_boilers.id, :picture => boiler_pictures[2], :description => description },
+		{ :name => 'Shit Happens', :price => 64.70, :category_id => gas_boilers.id, :picture => boiler_pictures[3], :description => description },
+		{ :name => 'BoilMe', :price => 200, :category_id => gas_boilers.id, :picture => boiler_pictures[4], :description => description },
+		{ :name => 'Gaser', :price => 50, :category_id => wood_boilers.id, :picture => boiler_pictures[5], :description => description }
 	]
 )
 
