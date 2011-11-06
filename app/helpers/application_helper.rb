@@ -22,4 +22,13 @@ module ApplicationHelper
 		 		 "data-product-id" => model.id,
 		 		 "data-product-type" => model.class.to_s.downcase
 	end
+
+	def quantity_button(action, model)
+		class_action = action == '+' ? 'increase' : 'decrease'
+		link_to action,
+				'#',
+				:class => "quantity-#{class_action}",
+				"data-product-id" => model.id,
+				"data-product-type" => model.class.to_s.downcase
+	end
 end

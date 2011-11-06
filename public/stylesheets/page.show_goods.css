@@ -1,0 +1,46 @@
+.description {
+  max-width: 600px;
+  margin-top: 15px;
+}
+
+.boiler-attribures, .service-attribures {
+  display: inline-block;
+  vertical-align: top;
+  padding-left: 10px;
+}
+
+.price-show {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.buy-button {
+  background: none repeat scroll 0 0 #C6AC09;
+  border-radius: 16px 16px 16px 16px;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 5px 30px;
+  text-decoration: none;
+  color: #31187E;
+}
+
+.buy-button:hover {
+  color: #FFFFFF;
+}
+
+.boiler-picture, .service-picture {
+  display: inline-block;
+}
+
+.setting-name {
+  display: inline-block;
+  font-style: italic;
+  font-weight: bolder;
+  width: 120px
+}
+
+.setting-value {
+  display: inline-block;
+  margin: 0;
+}

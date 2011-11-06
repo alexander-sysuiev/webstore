@@ -6,62 +6,15 @@
   margin-bottom: 20px;
 }
 
-.description {
-  max-width: 600px;
-  margin-top: 15px;
-}
-
-.boiler-attribures, .service-attribures {
-  display: inline-block;
-  vertical-align: top;
-  padding-left: 10px;
-}
-
-.price-show {
-  font-size: 24px;
-  font-weight: bold;
-}
-
-.buy-button {
-  background: none repeat scroll 0 0 #C6AC09;
-  border-radius: 16px 16px 16px 16px;
-  display: inline-block;
-  font-size: 18px;
-  font-weight: bold;
-  padding: 5px 30px;
-  text-decoration: none;
-  color: #31187E;
-}
-
-.boiler-picture, .service-picture {
-  display: inline-block;
-}
-
-#customer-basket{
-  background-color: #B0B0D0;
-  display: inline-block;
-  vertical-align: top;
-  margin-top: 15px;
-  margin-left: 10px;
-}
-
 #store-logo {
   text-align: center;
 }
 
-.boiler-image {
+.boiler-image, .service-image {
   display: block;
 }
 
-.boiler-preview {
-  display: inline-block;
-}
-
-.service-image {
-  display: block;
-}
-
-.service-preview {
+.boiler-preview, .service-preview {
   display: inline-block;
 }
 
@@ -73,18 +26,6 @@
   padding-bottom: 0;
   display: inline-block;
   vertical-align: top;
-}
-
-.setting-name {
-  display: inline-block;
-  font-style: italic;
-  font-weight: bolder;
-  width: 120px
-}
-
-.setting-value {
-  display: inline-block;
-  margin: 0;
 }
 
 #about-wrapper {
@@ -110,17 +51,6 @@
 	margin: 0;
 }
 
-.session-links {
-	display: inline-block;
-	margin-right: 20px;
-  margin-top: 1.7%;
-  float:right;
-}
-
-.session-links a {
-	color: #000000;
-}
-
 #main-menu {
 	background-color: #507090;
   margin-bottom: 16px;
@@ -144,19 +74,19 @@
 
 #side-menu {
 	background-color: #507090;
-    display: inline-block;
-    margin-top: -16px;
-    vertical-align: top;
-    margin-right: 20px;
-    min-height: 400px;
+  display: inline-block;
+  margin-top: -16px;
+  vertical-align: top;
+  margin-right: 20px;
+  min-height: 400px;
 }
 
 #side-menu ul{
 	list-style: none outside none;
-    margin-right: 5px;
-    margin-top: 15px;
-    padding-left: 10px;
-    padding-right: 10px;
+  margin-right: 5px;
+  margin-top: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 #side-menu li{
