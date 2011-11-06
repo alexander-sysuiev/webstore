@@ -1,0 +1,13 @@
+.order-content {
+	background-color: #DEDCCD;
+	padding: 10px;
+}
+
+.order-fields dt, .order-fields dd{
+	display: inline-block;
+	margin: 0;
+}
+
+.order-fields dt{
+	min-width: 100px;
+}

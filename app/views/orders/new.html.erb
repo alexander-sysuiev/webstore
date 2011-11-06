@@ -1,52 +1,61 @@
-<h1>Create Order</h1>
+<% content_for :header do%>
+	<h1>Create Order</h1>
+<% end %>
+<h1>You have chosen:</h1>
 <% if session[:goods].present? && session[:goods].to_a.flatten[1].present?%>
 	<% form_for @order, orders_path do |form| %>
 		<% total_price = 0 %>
-		<table>
+		<div class="order-content">
 			<% session[:goods].each do |type| %>
-				<tr class="cart-type">
-					<td colspan="3"><%= type[0].camelize.pluralize %></td>
-				</tr>
-				<% type[1].each do |product| %>
-					<% boiler = type[0].camelize.constantize.find(product[0]) %>
-					<% quantity = product[1] %>
-					<% price = boiler.price * quantity %>
-					<% total_price += price %>
-					<tr class="cart-boiler">
-						<td><%= "#{boiler.name}" %></td>
-						<td>
-							<%= "#{quantity}" %>
-						</td>
-						<td><%= format_price price %></td>
-
-					</tr>
+				<% if type[1].present? %>
+					<h3 class="cart-type">
+						<%= type[0].camelize.pluralize %>
+					</h3>
+					<dl class="product-list">
+					<% type[1].each do |product| %>
+						<% item = type[0].camelize.constantize.find(product[0]) %>
+						<% quantity = product[1] %>
+						<% price = item.price * quantity %>
+						<% total_price += price %>
+							<dt class="product-name"><%= "#{item.name}" %></dt>
+							<dd class="product-quantity">
+								<%= quantity %>
+							</dd>
+							<dd class="product-price"><%= format_price price %></dd>
+							<div class="clear"/>
+					<% end %>
+					</dl>
 				<% end %>
 			<% end %>
-			<tr class="cart-total">
-				<td colspan="2">Total:</td>
-				<td><%= format_price total_price %></td>
-			</tr>
-		</table>
+			<dl class="cart-total">
+				<dt>Total:</dt>
+				<dd><%= format_price total_price %></dd>
+			</dl>
+		</div>
+		<h3>Fill information about yourself:</h3>
 		<%= hidden_field_tag "order[price]", total_price %>
-		<dl>
+		<dl class="order-fields">
 			<dt>
 				<%= form.label :name, 'Your Name' %>
 			</dt>
 			<dd>
 				<%= form.text_field :name %>
 			</dd>
+			<div class"clear"/>
 			<dt>
 				<%= form.label :email %>
 			</dt>
 			<dd>
 				<%= form.text_field :email %>
 			</dd>
+			<div class"clear"/>
 			<dt>
 				<%= form.label :phone %>
 			</dt>
 			<dd>
 				<%= form.text_field :phone %>
 			</dd>
+			<div class"clear"/>
 		</dl>
 		<%= form.submit 'Buy' %>
 	<% end %>
