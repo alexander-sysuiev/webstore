@@ -1,31 +1,36 @@
-<% if session[:goods].present? && session[:goods].to_a.flatten[1].present?%>
-	<% total_price = 0 %>
+<% if session[:goods].present? && session[:goods].inject(false){|sum, type| sum || type[1].present?} %>
+	<div class="cart-content">
+		<% total_price = 0 %>
 
-		<% session[:goods].each do |type| %>
-			<h3 class="cart-type">
-				<%= type[0].camelize.pluralize %>
-			</h3>
-			<dl class="product-list">
-			<% type[1].each do |product| %>
-				<% item = type[0].camelize.constantize.find(product[0]) %>
-				<% quantity = product[1] %>
-				<% price = item.price * quantity %>
-				<% total_price += price %>
-					<dt class="product-name"><%= "#{item.name}" %></dt>
-					<dd class="product-quantity">
-						<%= quantity_button '+', item %>
-						<%= quantity %>
-						<%= quantity_button '-', item %>
-					</dd>
-					<dd class="product-price"><%= format_price price %></dd>
-					<div class="clear"/>
+			<% session[:goods].each do |type| %>
+				<% if type[1].present? %>
+					<h3 class="cart-type">
+						<%= type[0].camelize.pluralize %>
+					</h3>
+					<dl class="product-list">
+					<% type[1].each do |product| %>
+						<% item = type[0].camelize.constantize.find(product[0]) %>
+						<% quantity = product[1] %>
+						<% price = item.price * quantity %>
+						<% total_price += price %>
+							<dt class="product-name"><%= "#{item.name}" %></dt>
+							<dd class="product-quantity">
+								<%= quantity_button '+', item %>
+								<%= quantity %>
+								<%= quantity_button '-', item %>
+							</dd>
+							<dd class="product-price"><%= format_price price %></dd>
+							<div class="clear"/>
+					<% end %>
+					</dl>
+				<% end %>
 			<% end %>
+			<dl class="cart-total">
+				<dt>Total:</dt>
+				<dd><%= format_price total_price %></dd>
 			</dl>
-		<% end %>
-		<dl class="cart-total">
-			<dt>Total:</dt>
-			<dd><%= format_price total_price %></dd>
-		</dl>
-		<%= link_to 'Clear', "#", :class => "clear-cart" %>
-		<%= link_to 'Make Order', new_order_path, :class => "make-order" %>
+			<%= link_to 'Clear', "#", :class => "clear-cart" %>
+			<%= link_to 'Make Order', new_order_path, :class => "make-order" %>
+			<div class="clear"/>
+	</div>
 <% end %>

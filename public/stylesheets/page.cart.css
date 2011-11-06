@@ -10,8 +10,12 @@
 }
 
 #customer-cart{
+    display: inline-block;
+}
+
+.cart-content {
   background-color: #B0B0D0;
-  display: inline-block;
+
   vertical-align: top;
   margin-top: 15px;
   margin-left: 10px;
