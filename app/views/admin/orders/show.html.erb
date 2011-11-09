@@ -38,5 +38,11 @@
 	</dt>
 	<dd>
 		<%= format_price @order.price %>
-	<dd>
+	</dd>
 </dl>
+<% unless @order.proceed? %>
+	<% form_for @order, :url => admin_order_path(@order), :method => :put do |form| %>
+		<%= form.hidden_field :proceed, {:value => true} %>
+		<%= form.submit 'Mark as proceed'%>
+	<% end %>
+<% end %>
