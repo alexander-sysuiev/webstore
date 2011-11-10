@@ -7,6 +7,9 @@ class Order < ActiveRecord::Base
 
 	after_create :generate_serial
 
+	validates_presence_of :phone, :name
+	validates_numericality_of :phone
+
 private
 	
 	def generate_serial
