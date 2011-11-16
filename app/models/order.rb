@@ -1,14 +1,17 @@
 class Order < ActiveRecord::Base
-	has_many :boiler_orders
-	has_many :service_orders
-	has_many :boilers, :through => :boiler_orders
-	has_many :services, :through => :service_orders
-	belongs_to :address_id
+  has_many :boiler_orders
+  has_many :service_orders
+  has_many :boilers, :through => :boiler_orders
+  has_many :services, :through => :service_orders
+  belongs_to :address_id
 
-	after_create :generate_serial
+  after_create :generate_serial
 
-	validates_presence_of :phone, :name
-	validates_numericality_of :phone
+	validates_presence_of		:phone, :name
+	validates_numericality_of	:phone
+	validates_format_of     :email,
+                          :with => /\A[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]+\z/,
+                          :allow_blank => true
 
 private
 	
