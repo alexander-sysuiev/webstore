@@ -17,8 +17,10 @@ class OrdersController < WorkflowController
 				end
 			end
 			session[:goods] = nil
+			flash[:success] = 'Order is successfully created'
 			redirect_to root_path
 		else
+			flash[:error] = 'Order is not valid'
 			render new_order_path
 		end
 	end

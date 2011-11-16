@@ -1,0 +1,5 @@
+<%- flash.each do |name, msg| -%>
+  <%- unless msg.blank? -%>
+    <%= link_to_function content_tag(:div, content_tag(:span, msg, :class => 'popup-inside'), :id => "flash_#{name}", :class => "popup flash #{name}"), "$(this).hide()", :class => "popup-close" %>
+  <%- end -%>
+<%- end -%>

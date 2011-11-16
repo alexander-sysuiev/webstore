@@ -10,6 +10,7 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
+  <%= render 'layouts/flash', :flash => flash %>
 	<div id="body-wrapper">
 		<%= content_for?(:content) ? yield(:content) : yield %>
 	</div>

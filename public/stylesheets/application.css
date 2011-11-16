@@ -2,6 +2,26 @@
   clear: both;
 }
 
+#flash_error {
+  text-align: center;
+  background-color: #D20D0D;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 0px;
+}
+
+#flash_error a {
+  color: #000000;
+  float: right;
+  margin-top: -1.7%;
+  text-decoration: none;
+}
+
+.field_with_errors input {
+  border: 2px solid red;
+}
+
 #main-menu li{
   display: inline;
 }
@@ -108,4 +128,16 @@
 body {
 	margin: 0;
 	background-color: #D0D0EE;
+}
+
+.field_with_errors {
+  display: inline-block;
+}
+
+.field_error {
+  background-color: #B10D0D;
+  color: white;
+  font-size: 12px;
+  padding: 2px 3px;
+  vertical-align: middle;
 }
