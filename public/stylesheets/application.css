@@ -2,14 +2,21 @@
   clear: both;
 }
 
+.flash-wrapper{
+  position: absolute;
+  width: 100%;
+}
+
 .flash_error {
   background-color: #D20D0D;
   color: #FFFFFF;
   font-size: 20px;
   font-weight: bolder;
+  position: relative;
+  z-index: 2;
 }
 
-.flash_success {
+.flash_success, .flash_notice {
   background-color: #1DC41B;
   color: #FFFFFF;
   font-size: 20px;
@@ -57,7 +64,7 @@
 
 #body-wrapper {
   width: 70%;
-  margin-top: 15px;
+  margin-top: 50px;
   margin-left: 70px;
   background-color: #B0B0D0;
   padding-bottom: 0;

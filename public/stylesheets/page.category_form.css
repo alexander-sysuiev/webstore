@@ -1,0 +1,12 @@
+.category-form dt, .category-form dd{
+  display: inline;
+}
+
+.category-form dt {
+	float: left;
+	clear: left;
+}
+.category-form dd{
+	float: right;
+	clear: right;
+}

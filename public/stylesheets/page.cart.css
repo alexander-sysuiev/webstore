@@ -1,23 +1,23 @@
 .session-links {
-	display: inline-block;
-	margin-right: 20px;
+  display: inline-block;
+  margin-right: 20px;
   margin-top: 1.7%;
   float:right;
 }
 
 .session-links a {
-	color: #000000;
+  color: #000000;
 }
 
 #customer-cart{
-    display: inline-block;
+  display: inline-block;
+  margin-top: 50px;
 }
 
 .cart-content {
   background-color: #B0B0D0;
 
   vertical-align: top;
-  margin-top: 15px;
   margin-left: 10px;
   padding: 10px;
 }

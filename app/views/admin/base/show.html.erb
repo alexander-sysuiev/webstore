@@ -1,32 +1,38 @@
 <% form_for current_admin, :url => admin_base_path(current_admin.id), :method => :put do |f|%>
-	<dl>
+	<dl class="admin-form">
 		<dt>
 			<%= f.label :first_name, 'First Name' %>
 		</dt>
 		<dd>
 			<%= f.text_field :first_name %>
 		</dd>
+		<div class="clear"/>
 		<dt>
 			<%= f.label :last_name, 'Last Name' %>
 		</dt>
 		<dd>
 			<%= f.text_field :last_name %>
 		</dd>
+		<div class="clear"/>
 		<dt>
 			<%= f.label :email, 'Email' %>
 		</dt>
 		<dd>
 			<%= f.text_field :email %>
 		</dd>
+		<div class="clear"/>
+		<%= f.submit 'Update' %>
 	</dl>
-	<%= f.submit 'Update' %>
+	
 <% end %>
-<%= link_to 'Add category', new_admin_category_path %>
-<%= link_to 'Add setting', new_admin_setting_path %>
-<%= link_to 'Settings List', admin_settings_path %>
-<%= link_to 'Add boiler', new_admin_boiler_path %>
-<%= link_to 'Add service', new_admin_service_path %>
-<%= link_to 'Orders', admin_orders_path %>
+<ul class="admin-menu">
+	<li><%= link_to 'Add category', new_admin_category_path %></li>
+	<li><%= link_to 'Add setting', new_admin_setting_path %></li>
+	<li><%= link_to 'Settings List', admin_settings_path %></li>
+	<li><%= link_to 'Add boiler', new_admin_boiler_path %></li>
+	<li><%= link_to 'Add service', new_admin_service_path %></li>
+	<li><%= link_to 'Orders', admin_orders_path %></li>
+</ul>
 <% content_for :header do%>
 	<h1>Admins Cabinet</h1>
 <% end %>

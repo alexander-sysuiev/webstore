@@ -5,6 +5,7 @@
 			<th>Customer Name</th>
 			<th>Price</th>
 			<th>Phone</th>
+			<th>State</th>
 			<th></th>
 		</thead>
 		<tbody>
@@ -14,6 +15,7 @@
 					<td><%= order.name %></td>
 					<td><%= format_price order.price %></td>
 					<td><%= order.phone %></td>
+					<td><%= order.proceed? ? 'Proceed' : 'Open' %></td>
 					<td><%= link_to "Details", admin_order_path(order) %></td>
 				</tr>
 			<% end %>

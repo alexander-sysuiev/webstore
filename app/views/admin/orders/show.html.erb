@@ -1,48 +1,38 @@
-<% @boilers.each do |boiler| %>
-	<div>
-		<%= "#{Boiler.find(boiler.good_id).name}  #{boiler.quantity}  #{format_price boiler.price}" %>
-	</div>
-<% end %>
-<% @services.each do |service| %>
-	<div>
-		<%= "#{Service.find(service.good_id).name}  #{service.quantity}  #{format_price service.price}" %>
-	</div>
-<% end %>
-<dl>
-	<dt>
-		Order Number
-	</dt>
-	<dd>
-		<%= @order.order_number %>
-	<dd>
-	<dt>
-		Customer Name
-	</dt>
-	<dd>
-		<%= @order.name %>
-	<dd>
-	<dt>
-		Email
-	</dt>
-	<dd>
-		<%= @order.email %>
-	<dd>
-	<dt>
-		Phone
-	</dt>
-	<dd>
-		<%= @order.phone %>
-	<dd>
-	<dt>
-		Price
-	</dt>
-	<dd>
-		<%= format_price @order.price %>
-	</dd>
-</dl>
-<% unless @order.proceed? %>
-	<% form_for @order, :url => admin_order_path(@order), :method => :put do |form| %>
-		<%= form.hidden_field :proceed, {:value => true} %>
-		<%= form.submit 'Mark as proceed'%>
+<% if @boilers.any? %>
+	<% @boilers.each do |boiler| %>
+		<div>
+			<%= "#{Boiler.find(boiler.good_id).name}  #{boiler.quantity}  #{format_price boiler.price}" %>
+		</div>
+	<% end %>
+	<% @services.each do |service| %>
+		<div>
+			<%= "#{Service.find(service.good_id).name}  #{service.quantity}  #{format_price service.price}" %>
+		</div>
+	<% end %>
+	<dl class="order-info">
+		<dt>Order Number:</dt>
+		<dd><%= @order.order_number %><dd>
+
+		<dt>Customer Name:</dt>
+		<dd><%= @order.name %><dd>
+
+		<dt>Email:</dt>
+		<dd><%= @order.email %><dd>
+
+		<dt>Phone:</dt>
+		<dd><%= @order.phone %><dd>
+
+		<dt>Price:</dt>
+		<dd><%= format_price @order.price %></dd>
+
+		<dt>State:</dt>
+		<dd><%= @order.proceed? ? 'Proceeded' : 'Open' %></dd>
+	</dl>
+	<div class="clear"></div>
+	<% unless @order.proceed? %>
+		<% form_for @order, :url => admin_order_path(@order), :method => :put do |form| %>
+			<%= form.hidden_field :proceed, {:value => true} %>
+			<%= form.submit 'Mark as proceed'%>
+		<% end %>
 	<% end %>
 <% end %>

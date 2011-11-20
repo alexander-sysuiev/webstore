@@ -1,0 +1,20 @@
+.order-info {
+  width: 400px;
+}
+
+.order-info dt, .order-info dd{
+  display: inline;  
+}
+
+.order-info dt {
+  float: left;
+  font-size: 18px;
+  font-weight: bolder;
+  clear: left;
+}
+
+.order-info dd{
+  float: right;
+  clear: right;
+  font-style: italic;
+}

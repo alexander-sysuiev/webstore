@@ -1,6 +1,6 @@
 <h1>Create Category</h1>
 <% form_for :category, :url => admin_categories_path do |f| %>
-	<dl>
+	<dl class="category-form">
 		<dt>
 			<%= f.label :name, 'Name' %>
 		</dt>
@@ -14,5 +14,6 @@
 			<%= f.select :kind, Category::KINDS.map{|kind| [kind.to_s.humanize, kind]} %>
 		</dd>
 	</dl>
+	<div class="clear" ></div>
 	<%= f.submit 'Create' %>
 <% end %>

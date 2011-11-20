@@ -1,0 +1,41 @@
+.admin-form {
+  display:inline-block;
+  width: 420px;
+  vertical-align: top;
+}
+
+.admin-form dt, .admin-form dd {
+  display:inline-block;
+}
+
+.admin-form dd {
+  margin: 0;
+}
+
+.admin-form dt {
+  width: 100px;
+}
+
+.admin-menu {
+  display: inline-block;
+  list-style: none outside none;
+  margin-left: 100px;
+  padding: 0;
+  text-align: right;
+}
+
+.admin-menu a{
+  color: #000000;
+}
+
+.admin-menu a:hover {
+  color: #FFFFFF;
+}
+
+.admin-menu li{
+  margin-bottom: 10px;
+}
+
+.edit_admin {
+  display: inline;
+}

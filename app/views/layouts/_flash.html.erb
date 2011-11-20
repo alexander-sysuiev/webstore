@@ -1,5 +1,8 @@
-<%- flash.each do |name, msg| -%>
-  <%- unless msg.blank? -%>
-    <%= link_to_function content_tag(:div, content_tag(:span, msg, :class => 'popup-inside'), :class => "flash flash_#{name}"), "$(this).hide()", :class => "popup-close" %>
-  <%- end -%>
-<%- end -%>
+<%= javascript_include_tag 'pages/flash'%>
+<div class="flash-wrapper">
+	<%- flash.each do |name, msg| -%>
+	  <%- unless msg.blank? -%>
+	    <%= link_to_function content_tag(:div, content_tag(:span, msg, :class => 'popup-inside'), :class => "flash flash_#{name}"), "$(this).hide()", :class => "popup-close" %>
+	  <%- end -%>
+	<%- end -%>
+</div>
