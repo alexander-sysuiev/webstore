@@ -21,7 +21,7 @@ class OrdersController < WorkflowController
       flash[:success] = 'Order is successfully created'
       redirect_to root_path
     else
-      flash[:error] = 'Order is not valid'
+      flash.now[:error] = 'Order is not valid'
       render new_order_path
     end
   end

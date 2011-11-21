@@ -1,22 +1,27 @@
-Webstore::Application.routes.draw do |map|
-  map.root :controller => :boilers, :action => :index
+Webstore::Application.routes.draw do
+  root :controller => :boilers, :action => :index
   devise_for :admins
-  map.resources :boilers, :only => [:index]
-  map.resources :services, :only => [:index]
-  map.resources :categories, :only => [] do |categories|
-  	categories.resources :boilers, :only => [:index, :show]
-  	categories.resources :services, :only => [:index, :show]
+  resources :boilers, :only => [:index]
+  resources :services, :only => [:index]
+  resources :categories, :only => [] do
+  	resources :boilers, :only => [:index, :show]
+  	resources :services, :only => [:index, :show]
   end
-  map.resources :orders, :only => [:new, :create]
-  map.resource :about, :only => [:show]
-  map.resource :cart, :only => [:create], :member => {:decrease => :post, :clear => :post}
-  map.namespace :admin do |admin|
-    admin.root :controller => :base, :action => :show
-    admin.resources :orders, :only => [:index, :show, :update]
-    admin.resources :base, :controller => :base, :only => [:update]
-    admin.resources :boilers, :only => [:new, :create, :edit, :update]
-    admin.resources :services, :only => [:new, :create, :edit, :update]
-    admin.resources :categories, :only => [:new, :create]
-    admin.resources :settings, :only => [:new, :create, :index]
+  resources :orders, :only => [:new, :create]
+  resource :about, :only => [:show]
+  resource :cart, :only => [:create] do
+    member do
+      post :decrease
+      post :clear
+    end
+  end
+  namespace :admin do
+    root :controller => :base, :action => :show
+    resources :orders, :only => [:index, :show, :update]
+    resources :base, :controller => :base, :only => [:update]
+    resources :boilers, :only => [:new, :create, :edit, :update]
+    resources :services, :only => [:new, :create, :edit, :update]
+    resources :categories, :only => [:new, :create]
+    resources :settings, :only => [:new, :create, :index]
   end
 end
