@@ -2,7 +2,7 @@
 	table.to_s.camelize.constantize.send(:delete_all)
 end
 
-Picture.all.each(&:destroy)
+# Picture.all.each(&:destroy)
 
 admin = Admin.create(:first_name => 'Store',
   				     :last_name => 'Admin',

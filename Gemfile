@@ -8,5 +8,5 @@ gem 'rmagick'
 gem 'devise'
 gem 'jquery-rails'
 gem 'heroku'
-gem "paperclipdropbox"
+gem "paperclipdropbox", '1.0.5'
 gem 'factory_girl_rails'

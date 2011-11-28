@@ -81,12 +81,14 @@
 }
 
 #main-menu li a{
+  background: -moz-linear-gradient(bottom, rgb(255,171,111) 45%, rgb(157,123,100) 85%);
+  background: -webkit-linear-gradient(bottom, rgb(255,171,111) 45%, rgb(157,123,100) 85%);
+  background: linear-gradient(bottom, rgb(255,171,111) 45%, rgb(157,123,100) 85%);
   border: 1px #444488;
-  background-color: #99AABD;
   color: #000;
   padding: 5px 10px;
   text-decoration: none;
-  border-radius: 10px;
+  border-radius: 13px;
 }
 
 #main-menu-items {
@@ -96,8 +98,11 @@
 }
 
 #main-menu {
-	background-color: #507090;
-  margin-bottom: 16px;
+  background: -moz-linear-gradient(left, rgba(83,97,107, 0.9) 25%, rgba(83,97,107, 0.2) 45%);
+  background: -webkit-linear-gradient(left, rgba(83,97,107, 0.9) 25%, rgba(83,97,107, 0.2) 45%);
+  border-top: solid 4px #000000;
+  border-bottom: solid 4px #000000;
+	margin-bottom: 16px;
   margin-top: 18px;
 }
 
@@ -117,8 +122,9 @@
 }
 
 #side-menu {
-	background-color: #507090;
-  display: inline-block;
+  background: -moz-linear-gradient(top, rgb(150,136,87) 5%, rgb(214,193,123) 45%);
+  background: -webkit-linear-gradient(top, rgb(83,97,107) 5%, rgb(214,193,123) 45%);
+	display: inline-block;
   margin-top: -16px;
   vertical-align: top;
   margin-right: 20px;
@@ -134,11 +140,17 @@
 }
 
 #side-menu li{
-	margin-bottom: 10px;
+	margin-bottom: 20px;
 }
 
 #side-menu li a{
 	color: #222222;
+  border-radius: 13px;
+  background: -moz-linear-gradient(bottom, rgb(255,203,131) 45%, rgb(253,253,207) 85%);
+  background: -webkit-linear-gradient(bottom, rgb(255,203,131) 45%, rgb(253,253,207) 85%);
+  background: linear-gradient(bottom, rgb(255,203,131) 45%, rgb(253,253,207) 85%);
+  padding: 5px 10px;
+  text-decoration: none;
 }
 
 #side-menu li a:hover {
