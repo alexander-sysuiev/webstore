@@ -44,6 +44,11 @@ GEM
       oauth (>= 0.3.6)
     erubis (2.6.6)
       abstract (>= 1.0.0)
+    factory_girl (2.3.2)
+      activesupport
+    factory_girl_rails (1.4.0)
+      factory_girl (~> 2.3.0)
+      railties (>= 3.0.0)
     heroku (2.11.0)
       launchy (>= 0.3.2)
       rest-client (~> 1.6.1)
@@ -127,6 +132,7 @@ PLATFORMS
 
 DEPENDENCIES
   devise
+  factory_girl_rails
   heroku
   jquery-rails
   mysql2 (~> 0.2.6)
