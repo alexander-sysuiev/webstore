@@ -2,9 +2,7 @@
   background: -moz-linear-gradient(top, rgb(150,136,87) 5%, rgb(214,193,123) 45%);
   background: -webkit-linear-gradient(top, rgb(83,97,107) 5%, rgb(214,193,123) 45%);
 	display: inline-block;
-  margin-top: -16px;
   vertical-align: top;
-  margin-right: 20px;
   min-height: 400px;
 }
 

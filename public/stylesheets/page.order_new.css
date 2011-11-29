@@ -1,6 +1,7 @@
 .order-content {
 	background-color: #DEDCCD;
 	padding: 10px;
+	width: 70%;
 }
 
 .order-fields dt, .order-fields dd{
