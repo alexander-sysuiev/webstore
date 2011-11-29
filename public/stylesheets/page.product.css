@@ -1,0 +1,7 @@
+.boiler-image, .service-image {
+  display: block;
+}
+
+.boiler-preview, .service-preview {
+  display: inline-block;
+}

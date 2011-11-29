@@ -7,13 +7,16 @@
   <%= javascript_include_tag 'jquery.ui' %>
   <%= javascript_include_tag 'jquery.ui.min' %>
   <%= javascript_include_tag 'jquery-ui-1.8.16.effects.min.js' %>
-  <div id="store-logo">
-  	<%= image_tag "logo.jpg", :size => "100x100" %>
-  </div>
+
   <%= csrf_meta_tag %>
 </head>
 <body>
-  <%= render 'layouts/flash', :flash => flash %>
+  <div class="head-wrapper">
+    <div id="store-logo">
+      <%= image_tag "logo.jpg", :size => "100x100" %>
+    </div>
+    <%= render 'layouts/flash', :flash => flash %>
+  </div>  
 	<div id="body-wrapper">
 		<%= content_for?(:content) ? yield(:content) : yield %>
 	</div>

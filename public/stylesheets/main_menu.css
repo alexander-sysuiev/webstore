@@ -1,0 +1,25 @@
+#main-menu li a{
+  background: -moz-linear-gradient(bottom, rgb(255,171,111) 45%, rgb(157,123,100) 85%);
+  background: -webkit-linear-gradient(bottom, rgb(255,171,111) 45%, rgb(157,123,100) 85%);
+  background: linear-gradient(bottom, rgb(255,171,111) 45%, rgb(157,123,100) 85%);
+  border: 1px #444488;
+  color: #000;
+  padding: 5px 10px;
+  text-decoration: none;
+  border-radius: 13px;
+}
+
+#main-menu-items {
+	padding: 15px 10px;
+	display: inline-block;
+	margin: 0;
+}
+
+#main-menu {
+  background: -moz-linear-gradient(left, rgba(83,97,107, 0.9) 25%, rgba(83,97,107, 0.2) 45%);
+  background: -webkit-linear-gradient(left, rgba(83,97,107, 0.9) 25%, rgba(83,97,107, 0.2) 45%);
+  border-top: solid 4px #000000;
+  border-bottom: solid 4px #000000;
+	margin-bottom: 16px;
+  margin-top: 18px;
+}

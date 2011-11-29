@@ -1,0 +1,35 @@
+.flash-wrapper{
+  position: absolute;
+  width: 100%;
+}
+
+.flash_error {
+  background-color: #D20D0D;
+  color: #FFFFFF;
+  font-size: 20px;
+  font-weight: bolder;
+  position: relative;
+  z-index: 2;
+}
+
+.flash_success, .flash_notice {
+  background-color: #1DC41B;
+  color: #FFFFFF;
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.flash {
+  text-align: center;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 0px; 
+}
+
+.flash a {
+  color: #000000;
+  float: right;
+  margin-top: -1.7%;
+  text-decoration: none;
+}
