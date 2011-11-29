@@ -16,6 +16,7 @@
       <%= image_tag "logo.jpg", :size => "100x100" %>
     </div>
     <%= render 'layouts/flash', :flash => flash %>
+    <%= yield(:main_menu) if content_for?(:main_menu)%>
   </div>  
 	<div id="body-wrapper">
 		<%= content_for?(:content) ? yield(:content) : yield %>

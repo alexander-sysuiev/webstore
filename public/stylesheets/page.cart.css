@@ -15,7 +15,7 @@
 
 .cart-content {
   background-color: #B0B0D0;
-
+  margin-top: -16px;
   vertical-align: top;
   margin-left: 10px;
   padding: 10px;
@@ -23,9 +23,8 @@
 
 .product-quantity {
 	display: inline-block;
-    margin: 0;
-    width: 50px;
-}
+  margin: 0;
+ }
 
 .product-price {
 	display: inline-block;
@@ -48,18 +47,18 @@
 
 .quantity-increase {
 	background-color: #D31434;
-    border-radius: 10px 0 0 10px;
-    color: #FFFFFF;
-    text-decoration: none;
+  border-radius: 10px 0 0 10px;
+  color: #FFFFFF;
+  text-decoration: none;
 }
 
 .quantity-decrease {
 	background-color: #D31434;
-    border-radius: 0px 10px 10px 0px;
-    color: #FFFFFF;
-    padding-left: 2px;
-    padding-right: 5px;
-    text-decoration: none;
+  border-radius: 0px 10px 10px 0px;
+  color: #FFFFFF;
+  padding-left: 2px;
+  padding-right: 5px;
+  text-decoration: none;
 }
 
 .cart-total dd {
@@ -69,9 +68,9 @@
 
 .product-name {
 	display: inline-block;
-    margin-right: 5px;
-    padding-left: 10px;
-    width: 75px;
+  margin-right: 5px;
+  padding-left: 10px;
+  width: 75px;
 }
 
 .product-list {
@@ -80,19 +79,19 @@
 
 .cart-type {
 	border-bottom: 1px solid #000000;
-    font-size: 16px;
-    font-style: italic;
-    margin: 0 0 10px;
-    text-align: right;
+  font-size: 16px;
+  font-style: italic;
+  margin: 0 0 10px;
+  text-align: right;
 }
 
 .clear-cart {
 	background-color: #7C92B1;
-    border-radius: 8px 8px 8px 8px;
-    color: #000000;
-    padding: 3px 10px;
-    text-decoration: none;
-    float: left;
+  border-radius: 8px 8px 8px 8px;
+  color: #000000;
+  padding: 3px 10px;
+  text-decoration: none;
+  float: left;
 }
 
 .clear-cart:hover {
@@ -106,9 +105,9 @@
 .make-order {
 	text-decoration: none;
 	background-color: #E1E7A3;
-    border-radius: 8px 8px 8px 8px;
-    color: #000000;
-    padding: 3px 10px;
-    float: right;
-    font-style: italic;
+  border-radius: 8px 8px 8px 8px;
+  color: #000000;
+  padding: 3px 10px;
+  float: right;
+  font-style: italic;
 }

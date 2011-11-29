@@ -19,7 +19,6 @@
   padding-bottom: 0;
   display: inline-block;
   vertical-align: top;
-  margin-top: -98px;
 }
 
 #about-wrapper {
@@ -68,6 +67,5 @@ body {
 
 .head-wrapper {
   background: url('/images/background_header.jpg') no-repeat;
-  background-size: 100%;
-  padding-bottom: 148px;
+  background-size: 100% 252px;
 }

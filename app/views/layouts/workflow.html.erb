@@ -1,9 +1,7 @@
-		<% content_for :content do%>
+			<% content_for :main_menu do%>
 				<div id="header">
 		  			<%= content_for :header %>
 				</div>
-			    
-
 				  <div id="main-menu">
 						<ul id="main-menu-items">
 							<li><%#= link_to 'Categories', root_path %></li>
@@ -20,6 +18,9 @@
 							</div>
 						<% end %>
 					</div>
+					<% end %>
+		<% content_for :content do%>
+
 				<div id="side-menu">
 					<ul>
 						<% @categories.each do |category| %>
