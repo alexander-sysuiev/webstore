@@ -28,6 +28,12 @@
   text-decoration: none;
 }
 
+#side-menu li a.selected-category{
+  background: -moz-linear-gradient(bottom, rgb(255,136,8) 45%, rgb(253,251,163) 85%);
+  background: -webkit-linear-gradient(bottom, rgb(255,136,8) 45%, rgb(253,251,163) 85%);
+  background: linear-gradient(bottom, rgb(255,136,8) 45%, rgb(253,251,163) 85%);
+}
+
 #side-menu li a:hover {
 	color: #BBBBBB;
 }

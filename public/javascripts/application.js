@@ -25,4 +25,9 @@ $(function() {
 
 		return false;
 	});
+
+	$(".category-link").click(function() {
+		$(".category-link").removeClass("selected-category");
+		$(this).addClass("selected-category");
+	});
 });

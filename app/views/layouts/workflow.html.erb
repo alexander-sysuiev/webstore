@@ -24,7 +24,7 @@
 				<div id="side-menu">
 					<ul>
 						<% @categories.each do |category| %>
-							<li><%= link_to category.name, category.service? ? category_services_path(category.id) : category_boilers_path(category.id), :remote => true %></li>
+							<li><%= link_to category.name, send("category_#{category.kind.pluralize}_path", category.id), :class => 'category-link', :remote => true %></li>
 						<% end %>
 					</ul>
 				</div>
