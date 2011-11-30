@@ -1,0 +1,6 @@
+$("#header").html("<h1><%= @category.nil? ? 'All Services' : @category.name %></h1>");
+<% if @services.any? %>
+	$("#content-wrapper").html("<%= escape_javascript(render('boilers/product_list', :products => @services)) %>");
+<% else %>
+  $("#content-wrapper").html("<h1>No boilers in database</h1>");
+<% end %>
