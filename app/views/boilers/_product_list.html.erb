@@ -2,7 +2,7 @@
   <div class="goods-preview">
     <% slice.each do |product| %>
       <div class="boiler-preview">
-      	<%= image_tag product.picture.photo.url(:thumb), :class => "boiler-image" %>
+      	<%= link_to image_tag(product.picture.photo.url(:thumb), :class => "boiler-image"), product_path(product) %>
       	<div><%= format_price product.price %></div>
       	<%= product_link(product) %>
       </div>

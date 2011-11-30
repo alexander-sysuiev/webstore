@@ -6,9 +6,12 @@ module ApplicationHelper
 		link_to category.name, path, :class => "category"
 	end
 
+	def product_path(product)
+		send("category_#{product.class.to_s.downcase}_path", product.category_id, product.id)
+	end
+
 	def product_link(product)
-		path = send("category_#{product.class.to_s.downcase}_path", product.category_id, product.id)
-		link_to product.name, path
+		link_to product.name, product_path(product)
 	end
 
 	def format_price(price)
