@@ -1,4 +1,4 @@
-<% if @boilers.any? %>
+<% if @boilers.any? || @services.any? %>
 	<% @boilers.each do |boiler| %>
 		<div>
 			<%= "#{Boiler.find(boiler.good_id).name}  #{boiler.quantity}  #{format_price boiler.price}" %>

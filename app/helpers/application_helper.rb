@@ -36,7 +36,7 @@ module ApplicationHelper
 	end
 
 	def field_error(model, field)
-		errors = model.errors.on(field)
+		errors = model.errors[field]
 		error = errors.instance_of?(Array) ? errors.first : errors
 		content_tag :span, error, :class => 'field_error' if error.present?
 	end
