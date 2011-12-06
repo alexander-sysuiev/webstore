@@ -28,7 +28,7 @@ private
       @items = []
 
       items_data.each do |product|
-        item = @name.camelize.constantize.find_by_id(product[0])
+        item = @name.to_s.camelize.constantize.find_by_id(product[0])
         quantity = product[1]
         @items << {:item => item, :quantity => quantity, :price => item.price * quantity} if item
       end

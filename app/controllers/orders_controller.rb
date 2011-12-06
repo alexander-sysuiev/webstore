@@ -9,7 +9,7 @@ class OrdersController < WorkflowController
     if @order.save
       @cart_session.types.each do |type|
         type.items.each do |product|
-          joining_class = "#{type.name.camelize}Order".constantize
+          joining_class = "#{type.name.to_s.camelize}Order".constantize
           joining_class.create! :good_id => product[:item].id,
                                 :price => product[:item].price,
                                 :quantity => product[:quantity],
