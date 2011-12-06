@@ -76,7 +76,7 @@ GEM
       activesupport (>= 2.3.2)
       cocaine (>= 0.0.2)
       mime-types
-    paperclipdropbox (1.0.5)
+    paperclipdropbox (1.0.6)
       dropbox
       paperclip
     polyglot (0.3.3)
@@ -132,13 +132,13 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  devise
-  factory_girl_rails
+  devise (= 1.5.2)
+  factory_girl_rails (= 1.4.0)
   heroku
-  jquery-rails
+  jquery-rails (= 1.0.19)
   mysql2 (~> 0.2.6)
-  paperclip
-  paperclipdropbox (= 1.0.5)
+  paperclip (= 2.4.5)
+  paperclipdropbox (= 1.0.6)
   rails (= 3.0.9)
-  rmagick
-  rspec-rails
+  rmagick (= 2.13.1)
+  rspec-rails (= 2.7.0)
