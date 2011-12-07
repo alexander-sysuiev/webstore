@@ -22,6 +22,9 @@
   <div id="customer-cart">
     <%= render 'carts/cart' %>
   </div>
+  <div id="footer-wrapper">
+    <%= yield(:footer) if content_for?(:footer) %>
+  </div>
 
 </body>
 </html>
