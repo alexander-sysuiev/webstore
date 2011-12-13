@@ -13,7 +13,7 @@ class Admin::BoilersController < Admin::BaseController
       boiler.settings.create @settings_attrs if @settings_attrs.present?
       redirect_to category_boiler_path(:category_id => boiler.category_id, :id => boiler.id)
     else
-      render new_admin_boiler_path
+      render :new
     end
   end
 
@@ -31,7 +31,7 @@ class Admin::BoilersController < Admin::BaseController
 
       redirect_to category_boiler_path(@boiler.category_id, @boiler.id)
     else
-      render edit_admin_boiler_path(@boiler)
+      render :edit
     end
   end
 
