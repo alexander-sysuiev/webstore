@@ -86,5 +86,6 @@ body {
 .head-wrapper {
   background: url('/images/background_header.jpg') no-repeat;
   background-size: 100% 252px;
+  position: relative;
   margin-bottom: -16px;
 }
