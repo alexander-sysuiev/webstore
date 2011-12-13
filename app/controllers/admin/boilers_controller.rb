@@ -8,8 +8,8 @@ class Admin::BoilersController < Admin::BaseController
   end
 
   def create
-    boiler_attrs = params[:boiler].merge(:picture => @picture)
-    if boiler = Boiler.create(boiler_attrs)
+    boiler = Boiler.new params[:boiler].merge(:picture => @picture)
+    if boiler.save
       boiler.settings.create @settings_attrs if @settings_attrs.present?
       redirect_to category_boiler_path(:category_id => boiler.category_id, :id => boiler.id)
     else
@@ -47,7 +47,7 @@ private
   end
   
   def generate_picture
-     @picture = Picture.build params[:boiler].delete(:picture) if params[:boiler][:picture].present?
+     @picture = Picture.new params[:boiler].delete(:picture) if params[:boiler][:picture].present?
   end
   
   def setting_attributes

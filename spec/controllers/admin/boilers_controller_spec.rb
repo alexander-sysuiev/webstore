@@ -27,8 +27,13 @@ describe Admin::BoilersController do
 			response.should redirect_to(category_boiler_path(:category_id => boiler.category_id, :id => boiler.id))
 		end
 
-		it "should render new page if failed" do
+		it "should render new page if no params" do
 			post :create
+			response.should redirect_to(new_admin_boiler_path)
+		end
+
+		it "should render new page on failure" do
+			post :create, :boiler => {:name => 'aaa', :category => @boiler.category}
 			response.should render_template(new_admin_boiler_path)
 		end
 
